@@ -1,3 +1,5 @@
+import 'package:amanzmy/blocs/app.bloc.dart';
+import 'package:amanzmy/blocs/bloc.provider.dart';
 import 'package:amanzmy/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +23,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: BlocProvider<AppBloc>(
+        child: HomePage(),
+        bloc: AppBloc(),
+      ),
     );
   }
 }
