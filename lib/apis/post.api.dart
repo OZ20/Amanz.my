@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:amanzmy/util/strings.dart';
 import 'package:http/http.dart' as http;
 
-const baseUrl = 'https://amanz.my/wp-json/wp/v2';
 
 Future getAllPost() async {
  try {
-   var response = await http.get(baseUrl + '');
+   var response = await http.get(baseUrl + '/posts?per_page=10');
    if(response.statusCode == 200){
      return jsonDecode(response.body);
    }
