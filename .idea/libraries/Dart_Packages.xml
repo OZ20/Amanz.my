@@ -30,6 +30,13 @@
             </list>
           </value>
         </entry>
+        <entry key="bubble_tab_indicator">
+          <value>
+            <list>
+              <option value="/Development/flutter/.pub-cache/hosted/pub.dartlang.org/bubble_tab_indicator-0.1.4/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="build">
           <value>
             <list>
@@ -142,6 +149,13 @@
             </list>
           </value>
         </entry>
+        <entry key="dynamic_theme">
+          <value>
+            <list>
+              <option value="/Development/flutter/.pub-cache/hosted/pub.dartlang.org/dynamic_theme-1.0.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="fixnum">
           <value>
             <list>
@@ -167,6 +181,13 @@
           <value>
             <list>
               <option value="/Development/flutter/packages/flutter_test/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="font_awesome_flutter">
+          <value>
+            <list>
+              <option value="/Development/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.4.0/lib" />
             </list>
           </value>
         </entry>
@@ -506,6 +527,7 @@
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/args-1.5.1/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.0.8/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-1.0.4/lib" />
+      <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/bubble_tab_indicator-0.1.4/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/build-1.1.0/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/build_config-0.3.1+4/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/build_resolvers-0.2.3/lib" />
@@ -522,8 +544,10 @@
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.14.6/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.2/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/dart_style-1.2.3/lib" />
+      <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/dynamic_theme-1.0.0/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/fixnum-0.10.9/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_cache_manager-0.2.0+1/lib" />
+      <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.4.0/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/front_end-0.1.9+1/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/glob-1.1.7/lib" />
       <root url="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/graphs-0.2.0/lib" />

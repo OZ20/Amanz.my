@@ -82,7 +82,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		J1ABZEAw0W7Ge3ZpQCl3NWwYImA=
+		gtH/Qn1a0FjLKr0ueHu1Cv2aFlo=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -150,15 +150,35 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		oG5/OGn+vw7vp/nu5DUDoZJ4nFc=
+		xxZcHTOyANAf7L66rQO0YqncgkU=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
-		8Eg+f3qfbnydCo65zUUTI2L/o/k=
+		NvsD5uPHihmDuyp9LVa7Om/No+0=
 		</data>
 		<key>flutter_assets/LICENSE</key>
 		<data>
-		boVQZrJqQUyR+/VTju94Yav/KHs=
+		1bz10xQhF6brzivFbY9c/7ef+s4=
+		</data>
+		<key>flutter_assets/assets/fonts/BebasNeue-Regular.ttf</key>
+		<data>
+		rDENQnH7HtUBL21RKw5+BhvO/dI=
+		</data>
+		<key>flutter_assets/assets/fonts/Roboto-Light.ttf</key>
+		<data>
+		fQQh3k4TmPuQhzeKnMySl728hLk=
+		</data>
+		<key>flutter_assets/assets/fonts/Roboto-Regular.ttf</key>
+		<data>
+		oY3L+ZyNIyXC+/IqZOjMKKDPTTs=
+		</data>
+		<key>flutter_assets/assets/img/amanz-logo-big.png</key>
+		<data>
+		61cP13Pt/UCC/z8Nlra6pQJDDDo=
+		</data>
+		<key>flutter_assets/assets/img/amanz-logo-single.jpg</key>
+		<data>
+		aBu8Q/zQuVj05HNyaRLT5gmbUSo=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.ttf</key>
 		<data>
@@ -170,11 +190,23 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		r3gEgJp4j8xFW0F1d5Ihw0bUVm4=
+		jAz5HzXkgI8UhyX0SQ5bzIx1esk=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
 		AlgKy1FbEPcZcd0kdJLLHtOy68I=
+		</data>
+		<key>flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf</key>
+		<data>
+		BIgOFyRbnYP3+LIlRdYjJxGfpSU=
+		</data>
+		<key>flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf</key>
+		<data>
+		v0ER0DCvFXTzuSEJ7xibcqbgvZA=
+		</data>
+		<key>flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf</key>
+		<data>
+		AhhTgW8Fdz69lTlfXgNXD8GKJXI=
 		</data>
 		<key>flutter_assets/vm_snapshot_data</key>
 		<data>
@@ -396,11 +428,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			J1ABZEAw0W7Ge3ZpQCl3NWwYImA=
+			gtH/Qn1a0FjLKr0ueHu1Cv2aFlo=
 			</data>
 			<key>hash2</key>
 			<data>
-			UGF+JBSakFvn0pPHH3JLo6CjBjM8pl96e5B/TGAueNg=
+			oIOXgoS0PETacFhpyQwRa+lBVLr6GOqPpGGzQEzlU1k=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -561,33 +593,88 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oG5/OGn+vw7vp/nu5DUDoZJ4nFc=
+			xxZcHTOyANAf7L66rQO0YqncgkU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Sps95+7JukayebvM0TLjL1LW1VXXndpKp/O8tOm9ZR8=
+			RL5534vFbP/vD5ehTOs8m6hw8B/Y9QObkeua9qNntw0=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8Eg+f3qfbnydCo65zUUTI2L/o/k=
+			NvsD5uPHihmDuyp9LVa7Om/No+0=
 			</data>
 			<key>hash2</key>
 			<data>
-			+vlc4DeQNrQqihrbyAQ+GfLyhJJmk3V8JJTsYL09FIs=
+			kRiOW3wFMdx/pmmDV4qARbzenwzVmg4swCJ8/ia5mPI=
 			</data>
 		</dict>
 		<key>flutter_assets/LICENSE</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			boVQZrJqQUyR+/VTju94Yav/KHs=
+			1bz10xQhF6brzivFbY9c/7ef+s4=
 			</data>
 			<key>hash2</key>
 			<data>
-			mIFDLdaQOtT15DxyoFXTxJcxE6dOjtaQAVWn4GNzF4U=
+			5IUxIYFLLXM2nwcdDd5uthj1weZuLHlP8+vT+QT2xRs=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/fonts/BebasNeue-Regular.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rDENQnH7HtUBL21RKw5+BhvO/dI=
+			</data>
+			<key>hash2</key>
+			<data>
+			8tjwAP1EpxcUvgMhrhLT1ryLsOopCwwTElFvREjOwRc=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/fonts/Roboto-Light.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fQQh3k4TmPuQhzeKnMySl728hLk=
+			</data>
+			<key>hash2</key>
+			<data>
+			lN9OSXbbjdrsJ/jowz7vkS50T7IAygkFF5SzjlpQL8A=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/fonts/Roboto-Regular.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oY3L+ZyNIyXC+/IqZOjMKKDPTTs=
+			</data>
+			<key>hash2</key>
+			<data>
+			FkZu9lBk5vOIWm0oBriUmsGsOLUk3Qz4/JZWXrTMKOg=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/img/amanz-logo-big.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			61cP13Pt/UCC/z8Nlra6pQJDDDo=
+			</data>
+			<key>hash2</key>
+			<data>
+			lQYeayOGXLAmc3Y0UIDUBV9HTXiUSEABzKQpNulSe84=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/img/amanz-logo-single.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aBu8Q/zQuVj05HNyaRLT5gmbUSo=
+			</data>
+			<key>hash2</key>
+			<data>
+			aUeaVITiCr+pQcwAMFjOqPPf05ZKVl4Dzg7/bFQDYYM=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.ttf</key>
@@ -616,11 +703,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			r3gEgJp4j8xFW0F1d5Ihw0bUVm4=
+			jAz5HzXkgI8UhyX0SQ5bzIx1esk=
 			</data>
 			<key>hash2</key>
 			<data>
-			LepfVEGPg8q2gBo0rZFr4kOhZZamWMnmBw7X8Eil1Hg=
+			FgX4rqZRlamczIGNhhN4+z/vMcxdsoXOtVP/lcjYzG0=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -632,6 +719,39 @@
 			<key>hash2</key>
 			<data>
 			ETQZmaktT/cBMTCTNJd49hWX7HSYPa18vp5zuIwK13c=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BIgOFyRbnYP3+LIlRdYjJxGfpSU=
+			</data>
+			<key>hash2</key>
+			<data>
+			Z/xCPkwx884LmiBZ8drGr+JmB+bC+DOmPHF5EyT2Jk0=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			v0ER0DCvFXTzuSEJ7xibcqbgvZA=
+			</data>
+			<key>hash2</key>
+			<data>
+			3gRM16/fHIvZrh7Frw59X8G1vK5EVSWQGgJKNZr8OUA=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AhhTgW8Fdz69lTlfXgNXD8GKJXI=
+			</data>
+			<key>hash2</key>
+			<data>
+			v2E5KgTUec13BUyMlNfWxNjeNvOHAMwD1JpjPDie0Pc=
 			</data>
 		</dict>
 		<key>flutter_assets/vm_snapshot_data</key>

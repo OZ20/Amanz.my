@@ -8,6 +8,8 @@ class PostCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final font = theme.textTheme;
     final size = MediaQuery.of(context).size;
     final cardHeight = 250.0;
     return Container(
@@ -18,22 +20,48 @@ class PostCard extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
           child: Card(
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            semanticContainer: true,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0)),
             elevation: 2.0,
             child: Stack(
               children: <Widget>[
                 CachedNetworkImage(
-                    errorWidget: Container(color: Colors.grey,),
+                    errorWidget: Container(
+                      color: Colors.grey,
+                    ),
                     width: size.width,
                     height: cardHeight,
                     fit: BoxFit.cover,
                     imageUrl: _post.jpFeaturedMedia),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(_post.title['rendered']),
-                    Text(_post.date.toLocal().toString()),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                      gradient: theme.brightness == Brightness.light
+                          ? LinearGradient(colors: [
+                              Color(0xFF373B44).withOpacity(.8),
+                              Color(0xFF4286f4).withOpacity(.7),
+                            ])
+                          : LinearGradient(colors: [
+                              Color(0xFFbdc3c7).withOpacity(.8),
+                              Color(0xFF2c3e50).withOpacity(.9),
+                            ])),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15.0, bottom: 15.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        _post.title['rendered'],
+                        style: font.title.copyWith(fontSize: 17, color: Colors.white),
+                      ),
+                      Text(_post.date.toLocal().toString(),
+                          style:
+                              TextStyle(fontSize: 10.0, color: Colors.white)),
+                    ],
+                  ),
                 ),
               ],
             ),

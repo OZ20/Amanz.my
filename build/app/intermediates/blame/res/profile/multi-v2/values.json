@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/jomsoftsdnbhd/Documents/GitHub/Amanz.my/build/app/intermediates/incremental/mergeProfileResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/Users/jomsoftsdnbhd/Documents/GitHub/Amanz.my/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "347"
+                    }
+                }
+            ]
+        }
+    ]
+}
