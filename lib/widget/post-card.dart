@@ -1,13 +1,16 @@
 import 'package:amanzmy/model/post.dart';
-import 'package:amanzmy/pages/article.dart';
+import 'package:amanzmy/pages/secondary/article.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:html_unescape/html_unescape.dart';
+
 
 class PostCard extends StatelessWidget {
   final Post _post;
 
   @override
   Widget build(BuildContext context) {
+    final locale = Locale.fromSubtags(countryCode: 'US');
     final theme = Theme.of(context);
     final font = theme.textTheme;
     final size = MediaQuery.of(context).size;
@@ -48,18 +51,20 @@ class PostCard extends StatelessWidget {
                             ])),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 15.0, bottom: 15.0),
+                  padding: const EdgeInsets.only(left: 15.0,right: 15.0, bottom: 15.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        _post.title['rendered'],
-                        style: font.title.copyWith(fontSize: 17, color: Colors.white),
+                        HtmlUnescape().convert(_post.title['rendered']),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        style: font.title.copyWith(fontSize: 17, color: Colors.white,),
                       ),
                       Text(_post.date.toLocal().toString(),
                           style:
-                              TextStyle(fontSize: 10.0, color: Colors.white)),
+                              TextStyle(fontSize: 10.0, color: Colors.white, locale: locale)),
                     ],
                   ),
                 ),

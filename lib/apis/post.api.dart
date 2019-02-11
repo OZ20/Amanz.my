@@ -5,14 +5,13 @@ import 'package:amanzmy/util/strings.dart';
 import 'package:http/http.dart' as http;
 
 
-Future getAllPost({count = 10}) async {
- try {
-   var response = await http.get(baseUrl + '/posts?per_page=$count');
-   if(response.statusCode == 200){
-     return jsonDecode(response.body);
-   }
- } on Exception catch (e) {
-   throw e;
- }
-
+Future getPost({int offset = 0 , int count = 10, String addUri = ''}) async {
+  try {
+    var response = await http.get(baseUrl + addUri + '/posts?per_page=$count&offset=$offset');
+    if(response.statusCode == 200){
+      return jsonDecode(response.body);
+    }
+  } on Exception catch (e) {
+    throw e;
+  }
 }
