@@ -27,6 +27,7 @@ class _UlasanPage extends State<UlasanPage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _tabController = new TabController(length: 2, vsync: this, initialIndex: 0);
+    _bloc = BlocProvider.of<UlasanPageBloc>(context)..init();
   }
 
   @override
@@ -41,7 +42,6 @@ class _UlasanPage extends State<UlasanPage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final font = theme.textTheme;
-    _bloc = BlocProvider.of<UlasanPageBloc>(context)..init();
     return Scaffold(
         backgroundColor: theme.backgroundColor,
         body: NestedScrollView(
@@ -120,21 +120,21 @@ class _UlasanPage extends State<UlasanPage> with TickerProviderStateMixin {
             ];
           },
           body: TabBarView(controller: _tabController, children: [
-            pageBody(SortBy.newPost, _bloc),
-            pageBody(SortBy.popular, _bloc),
+            pageBody(SortBy.newPost),
+            pageBody(SortBy.popular),
           ]),
         ));
   }
 
-  Widget pageBody(SortBy sort, UlasanPageBloc bloc) {
+  Widget pageBody(SortBy sort) {
     print('pagebody');
     switch (sort) {
       case SortBy.newPost:
-        return mainWidget(bloc.postNew, sort);
+        return mainWidget(_bloc.postNew, sort);
       case SortBy.popular:
-        return mainWidget(bloc.postPopular, sort);
+        return mainWidget(_bloc.postPopular, sort);
       default:
-        return mainWidget(bloc.postNew, sort);
+        return mainWidget(_bloc.postNew, sort);
     }
   }
 

@@ -23,7 +23,6 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _tabController = new TabController(length: 2, vsync: this);
-    print(_tabController.index);
   }
 
   @override

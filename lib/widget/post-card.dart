@@ -58,6 +58,7 @@ class PostCard extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         HtmlUnescape().convert(_post.title['rendered']),
+                        softWrap: true,
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                         style: font.title.copyWith(fontSize: 17, color: Colors.white,),

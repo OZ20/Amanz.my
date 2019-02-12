@@ -27,6 +27,7 @@ class _BeritaPage extends State<BeritaPage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _tabController = new TabController(length: 2, vsync: this, initialIndex: 0);
+    _bloc = BlocProvider.of<BeritaPageBloc>(context)..init();
   }
 
   @override
@@ -41,7 +42,6 @@ class _BeritaPage extends State<BeritaPage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final font = theme.textTheme;
-    _bloc = BlocProvider.of<BeritaPageBloc>(context)..init();
     return Scaffold(
         backgroundColor: theme.backgroundColor,
         body: NestedScrollView(
@@ -120,21 +120,22 @@ class _BeritaPage extends State<BeritaPage> with TickerProviderStateMixin {
             ];
           },
           body: TabBarView(controller: _tabController, children: [
-            pageBody(SortBy.newPost, _bloc),
-            pageBody(SortBy.popular, _bloc),
+            pageBody(SortBy.newPost),
+            pageBody(SortBy.popular),
           ]),
         ));
   }
 
-  Widget pageBody(SortBy sort, BeritaPageBloc bloc) {
-    print('pagebody');
+  Widget pageBody(SortBy sort) {
     switch (sort) {
       case SortBy.newPost:
-        return mainWidget(bloc.postNew, sort);
+        print('init new widget');
+        return mainWidget(_bloc.postNew, sort);
       case SortBy.popular:
-        return mainWidget(bloc.postPopular, sort);
+        print('init popular');
+        return mainWidget(_bloc.postPopular, sort);
       default:
-        return mainWidget(bloc.postNew, sort);
+        return mainWidget(_bloc.postNew, sort);
     }
   }
 

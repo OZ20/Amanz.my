@@ -10,10 +10,9 @@ class BeritaPageBloc extends BlocBase {
 
   BeritaPageBloc();
 
-  void init(){
-    print('widget init');
-    getPost().then((data) => filterData(data, sort: SortBy.popular)).catchError((e) => print(e));
-    getPost().then((data) => filterData(data, sort: SortBy.newPost)).catchError((e) => print(e));
+  void init() async {
+    await getPost().then((data) => filterData(data, sort: SortBy.popular)).catchError((e) => print(e));
+    await getPost().then((data) => filterData(data, sort: SortBy.newPost)).catchError((e) => print(e));
   }
 
 
@@ -29,19 +28,20 @@ class BeritaPageBloc extends BlocBase {
 
   Stream<List<Post>> get postPopular => _postPopular.stream;
 
-  static final List<Post> _popularPosts = [];
-  static final List<Post> _newPosts = [];
+  static final List<Post> _popularPosts = new List();
+  static final List<Post> _newPosts = new List();
 
   void filterData(List data, {SortBy sort}) {
-    print('filter berita called');
     if(_postNew.isClosed)
       return;
     switch (sort){
       case SortBy.newPost:
+        print('new berita called');
         data.forEach((post) => _newPosts.add(Post.fromJson(post)));
         sinkPostNew.add(_newPosts);
         break;
       case SortBy.popular:
+        print('popular berita called');
         data.forEach((post) => _popularPosts.add(Post.fromJson(post)));
         sinkPostPopular.add(_popularPosts);
         break;
