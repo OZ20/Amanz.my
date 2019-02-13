@@ -1,7 +1,14 @@
+import 'package:amanzmy/blocs/app.bloc.dart';
 import 'package:amanzmy/blocs/bloc.provider.dart';
 import 'package:amanzmy/blocs/berita.bloc.dart';
+import 'package:amanzmy/blocs/promo.bloc.dart';
+import 'package:amanzmy/blocs/tips.bloc.dart';
+import 'package:amanzmy/blocs/tv.bloc.dart';
 import 'package:amanzmy/blocs/ulasan.bloc.dart';
 import 'package:amanzmy/pages/primary/berita.dart';
+import 'package:amanzmy/pages/primary/promo.dart';
+import 'package:amanzmy/pages/primary/tips.dart';
+import 'package:amanzmy/pages/primary/tv.dart';
 import 'package:amanzmy/pages/primary/ulasan.dart';
 import 'package:amanzmy/widget/menu-item.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
@@ -16,28 +23,31 @@ class AppPage extends StatefulWidget {
 }
 
 class _AppPage extends State<AppPage> with TickerProviderStateMixin {
-  GlobalKey<ScaffoldState> _appScaffold = new GlobalKey();
   TabController _tabController;
 
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(length: 2, vsync: this);
+    _tabController = new TabController(length: 5, vsync: this);
   }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
-      key: _appScaffold,
+      key: AppPageBloc.appScaffoldKey,
       drawer: Theme(
-        data: theme.copyWith(canvasColor: theme.brightness == Brightness.light ? Colors.white.withOpacity(0.8) : Colors.black.withOpacity(0.8),),
+        data: theme.copyWith(
+          canvasColor: theme.brightness == Brightness.light
+              ? Colors.white.withOpacity(0.8)
+              : Colors.black.withOpacity(0.8),
+        ),
         child: Drawer(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 300.0),
+                padding: const EdgeInsets.only(top: 250.0),
                 child: ListView(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -49,8 +59,8 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin {
                             _tabController.animateTo(0);
                           });
                         },
-                        title:
-                            MenuItem('Berita', FontAwesomeIcons.solidNewspaper)),
+                        title: MenuItem(
+                            'BERITA', FontAwesomeIcons.solidNewspaper)),
                     ListTile(
                         onTap: () {
                           Navigator.pop(context);
@@ -58,7 +68,31 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin {
                             _tabController.animateTo(1);
                           });
                         },
-                        title: MenuItem('Ulasan', FontAwesomeIcons.book))
+                        title: MenuItem('ULASAN', FontAwesomeIcons.book)),
+                    ListTile(
+                        onTap: () {
+                          Navigator.pop(context);
+                          setState(() {
+                            _tabController.animateTo(2);
+                          });
+                        },
+                        title: MenuItem('PROMO', FontAwesomeIcons.moneyBill)),
+                    ListTile(
+                        onTap: () {
+                          Navigator.pop(context);
+                          setState(() {
+                            _tabController.animateTo(3);
+                          });
+                        },
+                        title: MenuItem('TV', FontAwesomeIcons.tv)),
+                    ListTile(
+                        onTap: () {
+                          Navigator.pop(context);
+                          setState(() {
+                            _tabController.animateTo(4);
+                          });
+                        },
+                        title: MenuItem('TIPS', FontAwesomeIcons.list)),
                   ],
                 ),
               ),
@@ -85,8 +119,9 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin {
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: IconButton(
                           icon: Icon(FontAwesomeIcons.moon),
-                          onPressed: () => DynamicTheme.of(context).setBrightness(
-                              Theme.of(context).brightness == Brightness.dark
+                          onPressed: () => DynamicTheme.of(context)
+                              .setBrightness(Theme.of(context).brightness ==
+                                      Brightness.dark
                                   ? Brightness.light
                                   : Brightness.dark),
                         ),
@@ -101,11 +136,17 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin {
       ),
       body: TabBarView(controller: _tabController, children: [
         BlocProvider<BeritaPageBloc>(
-          child: BeritaPage(_appScaffold),
+          child: BeritaPage(),
           bloc: BeritaPageBloc(),
         ),
         BlocProvider<UlasanPageBloc>(
-            child: UlasanPage(_appScaffold), bloc: UlasanPageBloc()),
+            child: UlasanPage(), bloc: UlasanPageBloc()),
+        BlocProvider<PromoPageBloc>(
+            child: PromoPage(), bloc: PromoPageBloc()),
+        BlocProvider<TvPageBloc>(
+            child: TvPage(), bloc: TvPageBloc()),
+        BlocProvider<TipsPageBloc>(
+            child: TipsPage(), bloc: TipsPageBloc()),
       ]),
     );
   }

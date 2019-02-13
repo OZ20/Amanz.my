@@ -7,10 +7,19 @@ import 'package:rxdart/rxdart.dart';
 
 class UlasanPageBloc extends BlocBase {
   void init() async {
-    await getPost(addUri: ulasanUrl).then((data) => filterData(data, sort: SortBy.popular)).catchError((e) => print(e));
-    await getPost(addUri: ulasanUrl).then((data) => filterData(data, sort: SortBy.newPost)).catchError((e) => print(e));
+    await getPost(addUri: ulasanUrl)
+        .then((data) => filterData(data, sort: SortBy.popular))
+        .catchError((e) => print(e));
+    await getPost(addUri: ulasanUrl)
+        .then((data) => filterData(data, sort: SortBy.newPost))
+        .catchError((e) => print(e));
   }
 
+  bool _loading = false;
+
+  bool get loadMore => _loading;
+
+  String get title => 'ULASAN';
 
   final Subject<List<Post>> _postNew = new BehaviorSubject();
 
@@ -28,9 +37,8 @@ class UlasanPageBloc extends BlocBase {
   static final List<Post> _newPosts = new List();
 
   void filterData(List data, {SortBy sort}) {
-    if(_postNew.isClosed)
-      return;
-    switch (sort){
+    if (_postNew.isClosed) return;
+    switch (sort) {
       case SortBy.newPost:
         print('new berita called');
         data.forEach((post) => _newPosts.add(Post.fromJson(post)));
@@ -49,19 +57,29 @@ class UlasanPageBloc extends BlocBase {
   }
 
   void getMorePost(SortBy sort) async {
-    switch (sort){
-      case SortBy.newPost:
-        await getPost(addUri: ulasanUrl, offset: _newPosts.length).then((data) => data.forEach((post) => _newPosts.add(Post.fromJson(post))));
-        sinkPostNew.add(_newPosts);
-        break;
-      case SortBy.popular:
-        await getPost(addUri: ulasanUrl, offset: _popularPosts.length).then((data) => data.forEach((post) => _popularPosts.add(Post.fromJson(post))));
-        sinkPostPopular.add(_popularPosts);
-        break;
-      default:
-        await getPost(addUri: ulasanUrl, offset: _newPosts.length).then((data) => data.forEach((post) => _newPosts.add(Post.fromJson(post))));
-        sinkPostNew.add(_newPosts);
-        break;
+    try {
+      switch (sort) {
+        case SortBy.newPost:
+          _loading = true;
+          await getPost(addUri: ulasanUrl, offset: _newPosts.length)
+              .then((data) =>
+                  data.forEach((post) => _newPosts.add(Post.fromJson(post))))
+              .whenComplete(() => _loading = false);
+          sinkPostNew.add(_newPosts);
+          break;
+        case SortBy.popular:
+          _loading = true;
+          await getPost(addUri: ulasanUrl, offset: _popularPosts.length)
+              .then((data) => data
+                  .forEach((post) => _popularPosts.add(Post.fromJson(post))))
+              .whenComplete(() => _loading = false);
+          sinkPostPopular.add(_popularPosts);
+          break;
+        default:
+          break;
+      }
+    } on Exception catch (e) {
+      throw e;
     }
   }
 

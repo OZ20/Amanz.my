@@ -6,12 +6,236 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfb2e861-d4ec-4950-a28e-a0b8a6ce429c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+    <list id="552efce8-1218-401c-a53d-af2ff2762386" name="alpha v0.21" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/flutter_webview_plugin/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/io/flutter/plugins/pathprovider/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/io/flutter/plugins/sharedpreferences/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/oz20/amanzmy/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/generated/source/buildConfig/debug/oz20/amanzmy/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/apk_list/debug/mainApkListPersistenceDebug/apk-list.gson" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/compatible_screen_manifest/debug/createDebugCompatibleScreenManifests/out/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/FontManifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/assets/fonts/BebasNeue-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/assets/fonts/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/assets/fonts/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/assets/img/amanz-logo-big.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/assets/img/amanz-logo-single.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/fonts/MaterialIcons-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/isolate_snapshot_data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/vm_snapshot_data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/snapshot_blob.bin.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/snapshot_blob.bin.d.fingerprint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/flutter-x86.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/zip-cache/BjghKU5tjKYvY+6dQWuXvIoHDOI=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/zip-cache/RJf4Aeg1I7Zc5ay7n6Sf0_j+aho=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/zip-cache/o7UEBEsRgLvgvccRLFZFc08ncHg=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/zip-cache/qHEs0ZXRn2aX1mnBHVY_cv7_j0s=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/zip-cache/rwZYN5M2jLRWlNs_R2b9HksYsBk=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJniLibs/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJniLibs/zip-cache/BjghKU5tjKYvY+6dQWuXvIoHDOI=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJniLibs/zip-cache/RJf4Aeg1I7Zc5ay7n6Sf0_j+aho=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJniLibs/zip-cache/o7UEBEsRgLvgvccRLFZFc08ncHg=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJniLibs/zip-cache/qHEs0ZXRn2aX1mnBHVY_cv7_j0s=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJniLibs/zip-cache/rwZYN5M2jLRWlNs_R2b9HksYsBk=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/zip-cache/Hys12ZL2Kyq6dgeX88POc1A6lcU=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/zip-cache/VaTZZskAD3VNwPKhnSyRR6dTbBg=" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/instant_run_merged_manifests/debug/processDebugManifest/instant-run/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/R.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/GeneratedPluginRegistrant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/pathprovider/R.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/sharedpreferences/R.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/oz20/amanzmy/BuildConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/oz20/amanzmy/MainActivity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/oz20/amanzmy/R$drawable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/oz20/amanzmy/R$mipmap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/oz20/amanzmy/R$style.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/compileDebugJavaWithJavac/classes/oz20/amanzmy/R.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/FontManifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/assets/fonts/BebasNeue-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/assets/fonts/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/assets/fonts/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/assets/img/amanz-logo-big.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/assets/img/amanz-logo-single.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/fonts/MaterialIcons-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/isolate_snapshot_data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/vm_snapshot_data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/merged_manifests/debug/processDebugManifest/merged/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/processed_res/debug/processDebugResources/out/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/split_list/debug/splitsDiscoveryTaskDebug/split-list.gson" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/symbols/debug/R.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/10/com/flutter_webview_plugin/R.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/10/io/flutter/plugins/GeneratedPluginRegistrant.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/10/io/flutter/plugins/pathprovider/R.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/10/io/flutter/plugins/sharedpreferences/R.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/10/oz20/amanzmy/BuildConfig.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/10/oz20/amanzmy/MainActivity.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/10/oz20/amanzmy/R$drawable.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/10/oz20/amanzmy/R$mipmap.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/10/oz20/amanzmy/R$style.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/10/oz20/amanzmy/R.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexMerger/debug/0/classes.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexMerger/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/externalLibsDexMerger/debug/0/classes.dex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/externalLibsDexMerger/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJavaRes/debug/0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJavaRes/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJniLibs/debug/0/lib/arm64-v8a/libflutter.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJniLibs/debug/0/lib/x86/libflutter.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJniLibs/debug/0/lib/x86_64/libflutter.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJniLibs/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/app/tmp/flutterBuildX86Jar/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/generated/not_namespaced_r_class_sources/debug/generateDebugRFile/out/com/flutter_webview_plugin/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/generated/source/buildConfig/debug/com/flutter_webview_plugin/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/annotations_typedef_file/debug/extractDebugAnnotations/typedefs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/incremental/debug-mergeJniLibs/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/incremental/packageDebugAssets/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/intermediate-jars/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/intermediate-jars/debug/res.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/BrowserClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/BuildConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/FlutterWebviewPlugin$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/FlutterWebviewPlugin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/ObservableWebView$OnScrollChangedCallback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/ObservableWebView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/R.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/WebviewManager$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/WebviewManager$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/WebviewManager$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/WebviewManager$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/WebviewManager$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/WebviewManager$ResultHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/flutter_webview_plugin/WebviewManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/merged_manifests/debug/processDebugManifest/merged/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/packaged-classes/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/symbols/debug/R.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/transforms/mergeJavaRes/debug/0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/transforms/mergeJavaRes/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/transforms/mergeJniLibs/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/outputs/aar/flutter_webview_plugin-debug.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/generated/not_namespaced_r_class_sources/debug/generateDebugRFile/out/io/flutter/plugins/pathprovider/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/generated/source/buildConfig/debug/io/flutter/plugins/pathprovider/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/annotations_typedef_file/debug/extractDebugAnnotations/typedefs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/incremental/debug-mergeJniLibs/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/incremental/packageDebugAssets/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/intermediate-jars/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/intermediate-jars/debug/res.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/pathprovider/BuildConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/pathprovider/PathProviderPlugin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/pathprovider/R.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/merged_manifests/debug/processDebugManifest/merged/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/packaged-classes/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/symbols/debug/R.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/transforms/mergeJavaRes/debug/0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/transforms/mergeJavaRes/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/intermediates/transforms/mergeJniLibs/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/outputs/aar/path_provider-debug.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/path_provider/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/generated/not_namespaced_r_class_sources/debug/generateDebugRFile/out/io/flutter/plugins/sharedpreferences/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/generated/source/buildConfig/debug/io/flutter/plugins/sharedpreferences/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/annotations_typedef_file/debug/extractDebugAnnotations/typedefs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/incremental/debug-mergeJniLibs/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/incremental/packageDebugAssets/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/intermediate-jars/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/intermediate-jars/debug/res.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/sharedpreferences/BuildConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/sharedpreferences/R.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/sharedpreferences/SharedPreferencesPlugin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/merged_manifests/debug/processDebugManifest/merged/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/packaged-classes/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/symbols/debug/R.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/transforms/mergeJavaRes/debug/0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/transforms/mergeJavaRes/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/transforms/mergeJniLibs/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/outputs/aar/shared_preferences-debug.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/shared_preferences/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/blocs/promo.bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/blocs/tips.bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/blocs/tv.bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/primary/promo.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/primary/tips.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/primary/tv.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widget/home-body.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -23,69 +247,65 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app.dill.incremental.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/app.dill.incremental.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/flutter_assets/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/isolate_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/isolate_snapshot_data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/isolate_snapshot_instr" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/isolate_snapshot_instr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/kernel_compile.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/kernel_compile.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/kernel_compile.d.fingerprint" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/kernel_compile.d.fingerprint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/snapshot.d.fingerprint" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/profile/snapshot.d.fingerprint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeProfileResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeProfileResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageProfile/tmp/profile/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageProfile/tmp/profile/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageProfile/tmp/profile/file-input-save-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageProfile/tmp/profile/file-input-save-data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageProfile/tmp/profile/zip-cache/4Il8pHRTGUDD8xtthoY0SXnWYHw=" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageProfile/tmp/profile/zip-cache/4Il8pHRTGUDD8xtthoY0SXnWYHw=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/profile/mergeProfileAssets/out/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/profile/mergeProfileAssets/out/flutter_assets/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/profile/mergeProfileAssets/out/isolate_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/profile/mergeProfileAssets/out/isolate_snapshot_data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/profile/mergeProfileAssets/out/isolate_snapshot_instr" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/profile/mergeProfileAssets/out/isolate_snapshot_instr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/4.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/6.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/6.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/dexBuilder/profile/7.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJavaRes/profile/0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/transforms/mergeJavaRes/profile/0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/app.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/app.apk.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/profile/app-profile.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/profile/app-profile.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/incremental/packageProfileResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/incremental/packageProfileResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Assets.car" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Assets.car" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Runner" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Runner" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/_CodeSignature/CodeResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/flutter_assets/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/flutter_webview_plugin/libflutter_webview_plugin.a" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/flutter_webview_plugin/libflutter_webview_plugin.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/libPods-Runner.a" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/libPods-Runner.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/path_provider/libpath_provider.a" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/path_provider/libpath_provider.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/shared_preferences/libshared_preferences.a" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/shared_preferences/libshared_preferences.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/webview_flutter/libwebview_flutter.a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Assets.car" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Assets.car" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Runner" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Runner" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/flutter_assets/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/path_provider/intermediates/incremental/packageProfileResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/path_provider/intermediates/incremental/packageProfileResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/shared_preferences/intermediates/incremental/packageProfileResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/shared_preferences/intermediates/incremental/packageProfileResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/snapshot_blob.bin.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/snapshot_blob.bin.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/snapshot_blob.bin.d.fingerprint" beforeDir="false" afterPath="$PROJECT_DIR$/build/snapshot_blob.bin.d.fingerprint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/.symlinks/plugins/webview_flutter" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_assets/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Headers/Private/webview_flutter/FLTCookieManager.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Headers/Private/webview_flutter/FlutterWebView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Headers/Private/webview_flutter/JavaScriptChannelHandler.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Headers/Private/webview_flutter/WebViewFlutterPlugin.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Headers/Public/webview_flutter/FLTCookieManager.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Headers/Public/webview_flutter/FlutterWebView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Headers/Public/webview_flutter/JavaScriptChannelHandler.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Headers/Public/webview_flutter/WebViewFlutterPlugin.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Manifest.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/jomsoftsdnbhd.xcuserdatad/xcschemes/Pods-Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/jomsoftsdnbhd.xcuserdatad/xcschemes/Pods-Runner.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/jomsoftsdnbhd.xcuserdatad/xcschemes/shared_preferences.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/jomsoftsdnbhd.xcuserdatad/xcschemes/shared_preferences.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/jomsoftsdnbhd.xcuserdatad/xcschemes/webview_flutter.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/jomsoftsdnbhd.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/jomsoftsdnbhd.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/webview_flutter/webview_flutter-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/webview_flutter/webview_flutter-prefix.pch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/webview_flutter/webview_flutter.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apis/post.api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/apis/post.api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blocs/app.bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/app.bloc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/blocs/berita.bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/berita.bloc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/blocs/ulasan.bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/ulasan.bloc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/primary/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/primary/app.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/primary/berita.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/primary/berita.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/primary/ulasan.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/primary/ulasan.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/secondary/article.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/secondary/article.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/util/strings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/util/strings.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widget/post-card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widget/post-card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
+    <list default="true" id="dfb2e861-d4ec-4950-a28e-a0b8a6ce429c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,44 +315,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="article.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/pages/secondary/article.dart">
+      <file leaf-file-name="berita.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/pages/primary/berita.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
+            <state relative-caret-position="264">
+              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/util/strings.dart">
+      <file leaf-file-name="app.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/pages/primary/app.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.api.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/apis/post.api.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="248">
+              <caret line="138" column="30" lean-forward="true" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ulasan.bloc.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/blocs/ulasan.bloc.dart">
+      <file leaf-file-name="berita.bloc.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/blocs/berita.bloc.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="333">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="promo.bloc.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/blocs/promo.bloc.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -140,31 +360,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Info.plist" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ios/Runner/Info.plist">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="promo.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/pages/primary/promo.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="39" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <file leaf-file-name="tips.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/pages/primary/tips.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post-card.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/widget/post-card.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+            <state relative-caret-position="323">
+              <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tv.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/pages/primary/tv.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ulasan.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/pages/primary/ulasan.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home-body.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/widget/home-body.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,6 +440,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -198,25 +457,33 @@
         <option value="$PROJECT_DIR$/lib/util/colors.dart" />
         <option value="$PROJECT_DIR$/lib/blocs/hompage.bloc.dart" />
         <option value="$PROJECT_DIR$/lib/pages/homepage.dart" />
-        <option value="$PROJECT_DIR$/lib/blocs/app.bloc.dart" />
         <option value="$PROJECT_DIR$/lib/pages/app.dart" />
         <option value="$PROJECT_DIR$/lib/pages/ulasan.dart" />
         <option value="$PROJECT_DIR$/lib/widget/menu-item.dart" />
         <option value="$PROJECT_DIR$/lib/blocs/homepage.bloc.dart" />
-        <option value="$PROJECT_DIR$/lib/pages/primary/homepage.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
-        <option value="$PROJECT_DIR$/lib/pages/primary/app.dart" />
-        <option value="$PROJECT_DIR$/lib/pages/primary/ulasan.dart" />
-        <option value="$PROJECT_DIR$/lib/blocs/berita.bloc.dart" />
-        <option value="$PROJECT_DIR$/lib/pages/primary/berita.dart" />
         <option value="$PROJECT_DIR$/lib/widget/post-card.dart" />
         <option value="$PROJECT_DIR$/ios/Runner/Info.plist" />
         <option value="$PROJECT_DIR$/lib/util/app.theme.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/pages/secondary/article.dart" />
-        <option value="$PROJECT_DIR$/lib/util/strings.dart" />
-        <option value="$PROJECT_DIR$/lib/blocs/ulasan.bloc.dart" />
         <option value="$PROJECT_DIR$/lib/apis/post.api.dart" />
+        <option value="$PROJECT_DIR$/lib/pages/primary/homepage.dart" />
+        <option value="$PROJECT_DIR$/lib/blocs/berita.bloc.dart" />
+        <option value="$PROJECT_DIR$/lib/util/strings.dart" />
+        <option value="$PROJECT_DIR$/lib/blocs/promo.bloc.dart" />
+        <option value="$PROJECT_DIR$/lib/blocs/ulasan.bloc.dart" />
+        <option value="$PROJECT_DIR$/lib/blocs/tv.bloc.dart" />
+        <option value="$PROJECT_DIR$/lib/blocs/tips.bloc.dart" />
+        <option value="$PROJECT_DIR$/lib/pages/primary/app.dart" />
+        <option value="$PROJECT_DIR$/lib/blocs/app.bloc.dart" />
+        <option value="$PROJECT_DIR$/lib/widget/home-body.dart" />
+        <option value="$PROJECT_DIR$/lib/pages/primary/berita.dart" />
+        <option value="$PROJECT_DIR$/lib/pages/primary/promo.dart" />
+        <option value="$PROJECT_DIR$/lib/pages/primary/tips.dart" />
+        <option value="$PROJECT_DIR$/lib/pages/primary/tv.dart" />
+        <option value="$PROJECT_DIR$/lib/pages/primary/ulasan.dart" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -243,85 +510,7 @@
             <path>
               <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
               <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="ios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="ios" type="462c0819:PsiDirectoryNode" />
-              <item name="Runner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="apis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="blocs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="primary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="secondary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amanz.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amanz.my" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
+              <item name=".dart_tool" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -341,11 +530,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/lib/pages/secondary" />
       <recent name="$PROJECT_DIR$/lib/pages/primary" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.dart_tool" />
       <recent name="$PROJECT_DIR$/assets/img" />
       <recent name="$PROJECT_DIR$/lib/assets/fonts" />
     </key>
@@ -418,6 +608,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="dfb2e861-d4ec-4950-a28e-a0b8a6ce429c" name="Default" comment="" />
+      <changelist id="552efce8-1218-401c-a53d-af2ff2762386" name="alpha v0.21" comment="" />
       <created>1549527670759</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -437,13 +628,13 @@
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50143063" side_tool="true" weight="0.3290653" />
       <window_info anchor="right" x="0" y="0" width="310" height="678" id="Documentation" side_tool="true" weight="0.3297568" />
       <window_info anchor="bottom" id="Dart Analysis" weight="0.3290653" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.3290653" />
-      <window_info anchor="bottom" id="Version Control" weight="0.3290653" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.3290653" />
+      <window_info anchor="bottom" id="Version Control" visible="true" weight="0.3290653" />
       <window_info anchor="bottom" id="Terminal" weight="0.3290653" />
       <window_info anchor="right" id="Flutter Outline" weight="0.3297568" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39948782" />
@@ -495,6 +686,7 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="SHOW_DETAILS_IN_CHANGES" value="false" />
               <option name="RECENTLY_FILTERED_USER_GROUPS">
                 <collection />
               </option>
@@ -519,69 +711,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Development/flutter/packages/flutter/lib/src/material/app_bar.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="951" column="13" selection-start-line="951" selection-start-column="13" selection-end-line="951" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Development/flutter/packages/flutter/lib/src/material/colors.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="193" column="6" selection-start-line="193" selection-start-column="6" selection-end-line="193" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Development/flutter/packages/flutter/lib/src/widgets/page_storage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Development/flutter/packages/flutter/lib/src/material/tab_controller.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="142" column="10" selection-start-line="142" selection-start-column="10" selection-end-line="142" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/menu-item.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.20.0/lib/src/observables/observable.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-398">
-          <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.20.0/lib/src/subjects/subject.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Development/flutter/packages/flutter/lib/src/widgets/scroll_view.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_pagewise-1.2.1/lib/flutter_pagewise.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2705">
-          <caret line="518" column="32" selection-start-line="518" selection-start-column="32" selection-end-line="518" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Development/flutter/packages/flutter/lib/src/widgets/scroll_physics.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -614,27 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="692">
           <caret line="343" column="6" selection-start-line="343" selection-start-column="6" selection-end-line="343" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/blocs/app.bloc.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/util/colors.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/util/sort.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -722,37 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/blocs/berita.bloc.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/pages/primary/app.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="104" column="23" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/pages/primary/ulasan.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-326">
-          <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/widget/post-card.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="821">
@@ -767,16 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/pages/primary/berita.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="82" column="39" selection-start-line="80" selection-start-column="32" selection-end-line="82" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -817,13 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/util/app.theme.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_markdown-0.2.0/lib/src/style_sheet.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -859,16 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/blocs/ulasan.bloc.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/pages/secondary/article.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -879,21 +929,186 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/util/app.theme.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/blocs/ulasan.bloc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="71" column="42" selection-end-line="93" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/blocs/tv.bloc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/blocs/tips.bloc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/util/colors.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/util/sort.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widget/menu-item.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/util/strings.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="105">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/apis/post.api.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/blocs/app.bloc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#1#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/primary/berita.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/primary/promo.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="39" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/primary/tips.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/primary/tv.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/primary/ulasan.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widget/home-body.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/primary/app.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="138" column="30" lean-forward="true" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/blocs/berita.bloc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/blocs/promo.bloc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
       </provider>
     </entry>
   </component>
