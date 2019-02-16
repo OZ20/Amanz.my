@@ -1,4 +1,0 @@
-#Wed Feb 13 10:29:42 MYT 2019
-base.0=/Users/jomsoftsdnbhd/Documents/GitHub/Amanz.my/build/app/intermediates/transforms/dexMerger/profile/0
-path.0=classes.dex
-renamed.0=classes.dex
