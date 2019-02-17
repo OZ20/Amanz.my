@@ -14,7 +14,6 @@ class BeritaPageBloc extends BlocBase {
       _newPosts.clear();
       _popularPosts.clear();
       await getPost().then((data) => filterData(data, sort: SortBy.newPost));
-
       await getPost().then((data) => filterData(data, sort: SortBy.popular));
     } on Exception catch (e) {
       throw e;
@@ -65,9 +64,9 @@ class BeritaPageBloc extends BlocBase {
 
   void getMorePost(SortBy sort) async {
     try {
+      _loading = true;
       switch (sort) {
         case SortBy.newPost:
-          _loading = true;
           await getPost(offset: _newPosts.length)
               .then((data) =>
                   data.forEach((post) => _newPosts.add(Post.fromJson(post))))
@@ -75,7 +74,6 @@ class BeritaPageBloc extends BlocBase {
           sinkPostNew.add(_newPosts);
           break;
         case SortBy.popular:
-          _loading = true;
           List<Post> _popularShuffled = new List();
           await getPost(offset: _popularPosts.length)
               .then((data) => data

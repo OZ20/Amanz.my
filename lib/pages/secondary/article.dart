@@ -170,6 +170,13 @@ class ArticlePage extends StatelessWidget {
                             ? Colors.blue
                             : Colors.blue),
                   ]),
+              em: font.body1,
+              h1: font.title,
+              h2: font.title,
+              h3: font.title,
+              h4: font.title,
+              h5: font.title,
+              h6: font.title,
               blockquotePadding: 15.0,
               blockquoteDecoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
@@ -177,7 +184,7 @@ class ArticlePage extends StatelessWidget {
                     ? Colors.grey[200]
                     : Colors.grey[800],
               ),
-              blockSpacing: 35.0,
+              blockSpacing: 25.0,
               img: TextStyle(),
             ),
             data: html2md.convert(_post.content['rendered']),

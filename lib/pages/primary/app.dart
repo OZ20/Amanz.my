@@ -10,6 +10,7 @@ import 'package:amanzmy/pages/primary/promo.dart';
 import 'package:amanzmy/pages/primary/tips.dart';
 import 'package:amanzmy/pages/primary/tv.dart';
 import 'package:amanzmy/pages/primary/ulasan.dart';
+import 'package:amanzmy/pages/secondary/settings.dart';
 import 'package:amanzmy/widget/menu-item.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,7 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticK
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(length: 5, vsync: this);
+    _tabController = new TabController(length: 2, vsync: this);
   }
 
   @override
@@ -37,6 +38,7 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticK
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
     return Scaffold(
       key: appBloc.appScaffoldKey,
@@ -48,11 +50,11 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticK
         ),
         child: Drawer(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.end,
+//            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 250.0),
+              Align(
+                alignment: Alignment.center,
                 child: ListView(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -74,48 +76,26 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticK
                           });
                         },
                         title: MenuItem('ULASAN', FontAwesomeIcons.book)),
-                    ListTile(
-                        onTap: () {
-                          Navigator.pop(context);
-                          setState(() {
-                            _tabController.animateTo(2);
-                          });
-                        },
-                        title: MenuItem('PROMO', FontAwesomeIcons.moneyBill)),
-                    ListTile(
-                        onTap: () {
-                          Navigator.pop(context);
-                          setState(() {
-                            _tabController.animateTo(3);
-                          });
-                        },
-                        title: MenuItem('TV', FontAwesomeIcons.tv)),
-                    ListTile(
-                        onTap: () {
-                          Navigator.pop(context);
-                          setState(() {
-                            _tabController.animateTo(4);
-                          });
-                        },
-                        title: MenuItem('TIPS', FontAwesomeIcons.list)),
                   ],
                 ),
               ),
               Align(
                 alignment: Alignment.bottomCenter,
+                heightFactor: 5.5,
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 20.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      Container(
+                      InkWell(
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage())),
                         child: Row(
                           children: <Widget>[
                             Icon(Icons.settings),
                             Padding(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 5.0),
-                              child: Text('Settings'),
+                              child: Text('Settingan'),
                             )
                           ],
                         ),
@@ -147,12 +127,6 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticK
         ),
         BlocProvider<UlasanPageBloc>(
             child: UlasanPage(), bloc: UlasanPageBloc()),
-        BlocProvider<PromoPageBloc>(
-            child: PromoPage(), bloc: PromoPageBloc()),
-        BlocProvider<TvPageBloc>(
-            child: TvPage(), bloc: TvPageBloc()),
-        BlocProvider<TipsPageBloc>(
-            child: TipsPage(), bloc: TipsPageBloc()),
       ]),
     );
   }
