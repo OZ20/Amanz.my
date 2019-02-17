@@ -3,6 +3,7 @@ import 'package:amanzmy/pages/secondary/article.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:html_unescape/html_unescape.dart';
+import 'package:intl/intl.dart';
 
 
 class PostCard extends StatelessWidget {
@@ -63,9 +64,11 @@ class PostCard extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         style: font.title.copyWith(fontSize: 17, color: Colors.white,),
                       ),
-                      Text(_post.date.toLocal().toString(),
+                      Text(DateFormat.MMMMd().format(_post.date) +
+                          ' , ' +
+                          DateFormat.jm().format(_post.date),
                           style:
-                              TextStyle(fontSize: 10.0, color: Colors.white, locale: locale)),
+                              TextStyle(fontSize: 13.0, color: Colors.white, locale: locale)),
                     ],
                   ),
                 ),

@@ -1,3 +1,5 @@
+import 'package:amanzmy/blocs/app.bloc.dart';
+import 'package:amanzmy/model/category.dart';
 import 'package:amanzmy/model/post.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -83,53 +85,82 @@ class ArticlePage extends StatelessWidget {
     );
   }
 
-  Widget header(font, theme) => Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  HtmlUnescape().convert(_post.title['rendered']),
-                  textAlign: TextAlign.center,
-                  style: font.title.copyWith(
-                    fontSize: 20.0,
-                    background: Paint()
-                      ..color = theme.brightness == Brightness.light
-                          ? Colors.black
-                          : Colors.white,
-                    color: theme.brightness == Brightness.light
-                        ? Colors.white
-                        : Colors.black,
-                  ),
+  Widget header(TextTheme font, theme) {
+    final Category _category = appBloc.getCategoryName(_post.categories);
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      child: Column(
+        children: <Widget>[
+          Align(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: Text(
+                _category.name,
+                style: font.title.copyWith(
+                  background: Paint()
+                    ..strokeWidth = 10.0
+                    ..color = theme.brightness == Brightness.light
+                        ? Colors.grey[350]
+                        : Colors.grey[800],
+                  color: theme.brightness == Brightness.light
+                      ? Colors.black
+                      : Colors.white,
                 ),
               ),
             ),
-            Row(
-              children: <Widget>[
-                Chip(
-                    label:
-                        Text(DateFormat.MMMMd().format(_post.date) + ' , ' + DateFormat.jm().format(_post.date))
-                )
-              ],
-            )
-          ],
-        ),
-      );
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: Text(
+                HtmlUnescape().convert(_post.title['rendered']),
+                textAlign: TextAlign.center,
+                style: font.title.copyWith(
+                  fontSize: 20.0,
+                  background: Paint()
+                    ..color = theme.brightness == Brightness.light
+                        ? Colors.black
+                        : Colors.white,
+                  color: theme.brightness == Brightness.light
+                      ? Colors.white
+                      : Colors.black,
+                ),
+              ),
+            ),
+          ),
+          Row(
+            children: <Widget>[
+              Chip(
+                  label: Text(DateFormat.MMMMd().format(_post.date) +
+                      ' , ' +
+                      DateFormat.jm().format(_post.date)))
+            ],
+          )
+        ],
+      ),
+    );
+  }
 
-  Widget content(font, theme, context) => Flexible(
+  Widget content(TextTheme font, ThemeData theme, context) {
+    final textSize = 18.0;
+    return Flexible(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
           child: MarkdownBody(
             styleSheet: MarkdownStyleSheet(
+              strong: font.body1
+                  .copyWith(fontWeight: FontWeight.bold, fontSize: textSize),
               p: font.body1.copyWith(
-                fontSize: 20.0,
+                height: 1.3,
+                letterSpacing: 1.0,
+                fontSize: textSize,
               ),
               a: font.body1.copyWith(
                   decoration: TextDecoration.underline,
-                  fontSize: 20.0,
+                  letterSpacing: 1.0,
+                  fontSize: textSize,
                   fontStyle: FontStyle.italic,
                   color: Colors.blue,
                   shadows: <Shadow>[
@@ -139,6 +170,13 @@ class ArticlePage extends StatelessWidget {
                             ? Colors.blue
                             : Colors.blue),
                   ]),
+              blockquotePadding: 15.0,
+              blockquoteDecoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: theme.brightness == Brightness.light
+                    ? Colors.grey[200]
+                    : Colors.grey[800],
+              ),
               blockSpacing: 35.0,
               img: TextStyle(),
             ),
@@ -146,10 +184,18 @@ class ArticlePage extends StatelessWidget {
             onTapLink: (data) => Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => WebviewScaffold(url: data))),
+                    builder: (context) => WebviewScaffold(
+                        appBar: AppBar(),
+                        initialChild: Container(
+                            color: Colors.grey,
+                            child: const Center(
+                                child: CircularProgressIndicator())),
+                        appCacheEnabled: true,
+                        url: data))),
           ),
         ),
       );
+  }
 
   ArticlePage(this._post);
 }

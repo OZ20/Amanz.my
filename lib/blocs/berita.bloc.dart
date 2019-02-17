@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:amanzmy/apis/post.api.dart';
+import 'package:amanzmy/apis/amanz.api.dart';
 import 'package:amanzmy/blocs/bloc.provider.dart';
 import 'package:amanzmy/model/post.dart';
 import 'package:amanzmy/util/sort.dart';
@@ -11,10 +11,11 @@ class BeritaPageBloc extends BlocBase {
 
   void init() async {
     try {
-      await getPost()
-          .then((data) => filterData(data, sort: SortBy.popular));
-      await getPost()
-          .then((data) => filterData(data, sort: SortBy.newPost));
+      _newPosts.clear();
+      _popularPosts.clear();
+      await getPost().then((data) => filterData(data, sort: SortBy.newPost));
+
+      await getPost().then((data) => filterData(data, sort: SortBy.popular));
     } on Exception catch (e) {
       throw e;
     }
@@ -52,6 +53,7 @@ class BeritaPageBloc extends BlocBase {
       case SortBy.popular:
         print('popular berita called');
         data.forEach((post) => _popularPosts.add(Post.fromJson(post)));
+        _popularPosts.shuffle();
         sinkPostPopular.add(_popularPosts);
         break;
       default:
@@ -74,10 +76,12 @@ class BeritaPageBloc extends BlocBase {
           break;
         case SortBy.popular:
           _loading = true;
+          List<Post> _popularShuffled = new List();
           await getPost(offset: _popularPosts.length)
-              .then((data) =>
-                  data.forEach((post) => _popularPosts.add(Post.fromJson(post))))
+              .then((data) => data
+                  .forEach((post) => _popularShuffled.add(Post.fromJson(post))))
               .whenComplete(() => _loading = false);
+          _popularPosts.addAll(_popularShuffled);
           sinkPostPopular.add(_popularPosts);
           break;
         default:

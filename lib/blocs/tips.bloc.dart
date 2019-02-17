@@ -1,4 +1,4 @@
-import 'package:amanzmy/apis/post.api.dart';
+import 'package:amanzmy/apis/amanz.api.dart';
 import 'package:amanzmy/blocs/bloc.provider.dart';
 import 'package:amanzmy/model/post.dart';
 import 'package:amanzmy/util/sort.dart';
@@ -7,6 +7,8 @@ import 'package:rxdart/rxdart.dart';
 
 class TipsPageBloc extends BlocBase {
   void init() async {
+    _newPosts.clear();
+    _popularPosts.clear();
     await getPost(addUri: tipsUrl)
         .then((data) => filterData(data, sort: SortBy.popular))
         .catchError((e) => print(e));

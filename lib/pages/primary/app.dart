@@ -22,7 +22,7 @@ class AppPage extends StatefulWidget {
   }
 }
 
-class _AppPage extends State<AppPage> with TickerProviderStateMixin {
+class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticKeepAliveClientMixin {
   TabController _tabController;
 
   @override
@@ -32,10 +32,14 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin {
   }
 
   @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
+
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
-      key: AppPageBloc.appScaffoldKey,
+      key: appBloc.appScaffoldKey,
       drawer: Theme(
         data: theme.copyWith(
           canvasColor: theme.brightness == Brightness.light
@@ -44,6 +48,7 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin {
         ),
         child: Drawer(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Padding(
@@ -134,7 +139,8 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin {
           ),
         ),
       ),
-      body: TabBarView(controller: _tabController, children: [
+      body: TabBarView(
+          controller: _tabController, children: [
         BlocProvider<BeritaPageBloc>(
           child: BeritaPage(),
           bloc: BeritaPageBloc(),

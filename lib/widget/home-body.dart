@@ -27,7 +27,7 @@ class HomeBody extends StatelessWidget{
               SliverAppBar(
                 centerTitle: true,
                 leading: InkWell(
-                  onTap: () => AppPageBloc.appScaffoldKey.currentState.openDrawer(),
+                  onTap: () => appBloc.appScaffoldKey.currentState.openDrawer(),
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(30.0),
                       child: Padding(
@@ -105,12 +105,11 @@ class HomeBody extends StatelessWidget{
   }
 
   Widget pageBody(SortBy sort) {
+    print(_bloc.toString() + sort.toString());
     switch (sort) {
       case SortBy.newPost:
-        print('init new berita widget');
         return mainWidget(_bloc.postNew, sort);
       case SortBy.popular:
-        print('init new berita popular');
         return mainWidget(_bloc.postPopular, sort);
       default:
         return mainWidget(_bloc.postNew, sort);
@@ -126,14 +125,20 @@ class HomeBody extends StatelessWidget{
             return NotificationListener<ScrollNotification>(
               onNotification: (notify) =>
                   _handleScrollNotification(notify, sort),
-              child: ListView.builder(
-                  key: PageStorageKey(sort),
-                  controller: _scrollController,
-                  shrinkWrap: true,
-                  itemCount: snapshot.data.length,
-                  itemBuilder: (context, index) {
-                    return Center(child: PostCard(snapshot.data[index]));
-                  }),
+              child: RefreshIndicator(
+                color: Theme.of(context).brightness == Brightness.light
+                    ? Colors.blue
+                    : Colors.white,
+                onRefresh: () => _bloc.init(),
+                child: ListView.builder(
+                    key: PageStorageKey(sort),
+                    controller: _scrollController,
+                    shrinkWrap: true,
+                    itemCount: snapshot.data.length,
+                    itemBuilder: (context, index) {
+                      return Center(child: PostCard(snapshot.data[index]));
+                    }),
+              ),
             );
           } else if (!snapshot.hasData &&
               snapshot.connectionState == ConnectionState.waiting) {
@@ -152,7 +157,7 @@ class HomeBody extends StatelessWidget{
     if (notification is ScrollEndNotification) {
       if (notification.metrics.pixels >=
           (notification.metrics.maxScrollExtent -
-              (notification.metrics.maxScrollExtent * 0.1))) {
+              (notification.metrics.maxScrollExtent * 0.2))) {
         if (!_bloc.loadMore)
           _bloc.getMorePost(sort);
       }
