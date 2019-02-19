@@ -120,6 +120,7 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticK
         ),
       ),
       body: TabBarView(
+          physics: NeverScrollableScrollPhysics(),
           controller: _tabController, children: [
         BlocProvider<BeritaPageBloc>(
           child: BeritaPage(),

@@ -146,62 +146,67 @@ class ArticlePage extends StatelessWidget {
   Widget content(TextTheme font, ThemeData theme, context) {
     final textSize = 18.0;
     return Flexible(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),
-          child: MarkdownBody(
-            styleSheet: MarkdownStyleSheet(
-              strong: font.body1
-                  .copyWith(fontWeight: FontWeight.bold, fontSize: textSize),
-              p: font.body1.copyWith(
-                height: 1.3,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25.0),
+        child: MarkdownBody(
+          styleSheet: MarkdownStyleSheet(
+            strong: font.body1.copyWith(
+                fontWeight: FontWeight.bold,
+                fontSize: textSize,
+                color: theme.brightness == Brightness.light
+                    ? Colors.grey[600]
+                    : Colors.grey[300]),
+            p: font.body1.copyWith(
+              height: 1.3,
+              letterSpacing: 1.0,
+              fontSize: textSize,
+            ),
+            a: font.body1.copyWith(
+                decoration: TextDecoration.underline,
                 letterSpacing: 1.0,
                 fontSize: textSize,
-              ),
-              a: font.body1.copyWith(
-                  decoration: TextDecoration.underline,
-                  letterSpacing: 1.0,
-                  fontSize: textSize,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.blue,
-                  shadows: <Shadow>[
-                    Shadow(
-                        blurRadius: 5.0,
-                        color: theme.brightness == Brightness.light
-                            ? Colors.blue
-                            : Colors.blue),
-                  ]),
-              em: font.body1,
-              h1: font.title,
-              h2: font.title,
-              h3: font.title,
-              h4: font.title,
-              h5: font.title,
-              h6: font.title,
-              blockquotePadding: 15.0,
-              blockquoteDecoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: theme.brightness == Brightness.light
-                    ? Colors.grey[200]
-                    : Colors.grey[800],
-              ),
-              blockSpacing: 25.0,
-              img: TextStyle(),
+                fontStyle: FontStyle.italic,
+                color: Colors.blue,
+                shadows: <Shadow>[
+                  Shadow(
+                      blurRadius: 5.0,
+                      color: theme.brightness == Brightness.light
+                          ? Colors.blue
+                          : Colors.blue),
+                ]),
+            em: font.body1
+                .copyWith(fontStyle: FontStyle.italic, fontSize: textSize),
+            h1: font.title,
+            h2: font.title,
+            h3: font.title,
+            h4: font.title,
+            h5: font.title,
+            h6: font.title,
+            blockquotePadding: 15.0,
+            blockquoteDecoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              color: theme.brightness == Brightness.light
+                  ? Colors.grey[200]
+                  : Colors.grey[800],
             ),
-            data: html2md.convert(_post.content['rendered']),
-            onTapLink: (data) => Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => WebviewScaffold(
-                        appBar: AppBar(),
-                        initialChild: Container(
-                            color: Colors.grey,
-                            child: const Center(
-                                child: CircularProgressIndicator())),
-                        appCacheEnabled: true,
-                        url: data))),
+            blockSpacing: 25.0,
+            img: TextStyle(),
           ),
+          data: html2md.convert(_post.content['rendered']),
+          onTapLink: (data) => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => WebviewScaffold(
+                      appBar: AppBar(),
+                      initialChild: Container(
+                          color: Colors.grey,
+                          child:
+                              const Center(child: CircularProgressIndicator())),
+                      appCacheEnabled: true,
+                      url: data))),
         ),
-      );
+      ),
+    );
   }
 
   ArticlePage(this._post);
