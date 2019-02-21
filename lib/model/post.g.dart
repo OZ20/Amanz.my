@@ -27,13 +27,16 @@ Post _$PostFromJson(Map<String, dynamic> json) {
       json['template'],
       json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : PostMeta.fromJson(json['meta'] as Map<String, dynamic>),
       json['categories'] as List,
       json['tags'] as List,
       json['jetpack_featured_media_url'],
       json['jetpack_publicize_connections'],
       json['jetpack_shortlink'],
-      json['_links']);
+      json['_links'],
+      json['_embedded'] == null
+          ? null
+          : PostEmbedded.fromJson(json['_embedded'] as Map<String, dynamic>));
 }
 
 Map<String, dynamic> _$PostToJson(Post instance) => <String, dynamic>{
@@ -58,16 +61,30 @@ Map<String, dynamic> _$PostToJson(Post instance) => <String, dynamic>{
       'jetpack_featured_media_url': instance.jpFeaturedMedia,
       'jetpack_publicize_connections': instance.jpPublicizeConnections,
       'jetpack_shortlink': instance.jpShortlink,
-      '_links': instance.links
+      '_links': instance.links,
+      '_embedded': instance.embedded
     };
 
-Meta _$MetaFromJson(Map<String, dynamic> json) {
-  return Meta(json['amp_status'], json['spay_email'],
+PostMeta _$PostMetaFromJson(Map<String, dynamic> json) {
+  return PostMeta(json['amp_status'], json['spay_email'],
       json['jetpack_publicize_message']);
 }
 
-Map<String, dynamic> _$MetaToJson(Meta instance) => <String, dynamic>{
+Map<String, dynamic> _$PostMetaToJson(PostMeta instance) => <String, dynamic>{
       'amp_status': instance.ampStatus,
       'spay_email': instance.spayEmail,
       'jetpack_publicize_message': instance.jetpack
     };
+
+PostEmbedded _$PostEmbeddedFromJson(Map<String, dynamic> json) {
+  return PostEmbedded(
+      json['author'] == null
+          ? null
+          : Author.fromJson(json['author'] as Map<String, dynamic>),
+      (json['wp:term'] as List)
+          ?.map((e) => e == null ? null : PostWpTerm.fromJson(e as List))
+          ?.toList());
+}
+
+Map<String, dynamic> _$PostEmbeddedToJson(PostEmbedded instance) =>
+    <String, dynamic>{'author': instance.author, 'wp:term': instance.wpTerm};

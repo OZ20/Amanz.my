@@ -10,10 +10,10 @@ class UlasanPageBloc extends BlocBase {
     _newPosts.clear();
     _popularPosts.clear();
     await getPost(addUri: ulasanUrl)
-        .then((data) => filterData(data, sort: SortBy.popular))
+        .then((data) => _filterData(data, sort: SortBy.popular))
         .catchError((e) => print(e));
     await getPost(addUri: ulasanUrl)
-        .then((data) => filterData(data, sort: SortBy.newPost))
+        .then((data) => _filterData(data, sort: SortBy.newPost))
         .catchError((e) => print(e));
   }
 
@@ -38,7 +38,7 @@ class UlasanPageBloc extends BlocBase {
   static final List<Post> _popularPosts = new List();
   static final List<Post> _newPosts = new List();
 
-  void filterData(List data, {SortBy sort}) {
+  void _filterData(List data, {SortBy sort}) {
     if (_postNew.isClosed) return;
     switch (sort) {
       case SortBy.newPost:

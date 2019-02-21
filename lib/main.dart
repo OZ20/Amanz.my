@@ -6,7 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  try {
+    runApp(MyApp());
+  } on Exception catch (e) {
+    throw e;
+  }
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

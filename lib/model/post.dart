@@ -1,10 +1,11 @@
+import 'package:amanzmy/model/author.dart';
+import 'package:amanzmy/model/taxonomy.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'post.g.dart';
 
 @JsonSerializable(nullable: true)
 class Post extends Object {
-
   final num id;
   final DateTime date;
   final DateTime date_gmt;
@@ -23,7 +24,7 @@ class Post extends Object {
   @JsonKey(name: 'ping_status')
   final pingStatus;
   final template;
-  final Meta meta;
+  final PostMeta meta;
   final List categories;
   final List tags;
   @JsonKey(name: 'jetpack_featured_media_url')
@@ -34,22 +35,41 @@ class Post extends Object {
   final jpShortlink;
   @JsonKey(name: '_links')
   final links;
+  @JsonKey(name: '_embedded')
+  final PostEmbedded embedded;
 
-  Post(this.id, this.date, this.date_gmt, this.slug, this.status, this.type,
-      this.link, this.title, this.content, this.excerpt, this.author,
-      this.featuredMedia, this.commentStatus, this.pingStatus, this.template,
-      this.meta, this.categories, this.tags, this.jpFeaturedMedia,
-      this.jpPublicizeConnections, this.jpShortlink, this.links);
+  Post(
+      this.id,
+      this.date,
+      this.date_gmt,
+      this.slug,
+      this.status,
+      this.type,
+      this.link,
+      this.title,
+      this.content,
+      this.excerpt,
+      this.author,
+      this.featuredMedia,
+      this.commentStatus,
+      this.pingStatus,
+      this.template,
+      this.meta,
+      this.categories,
+      this.tags,
+      this.jpFeaturedMedia,
+      this.jpPublicizeConnections,
+      this.jpShortlink,
+      this.links,
+      this.embedded);
 
   factory Post.fromJson(Map<String, dynamic> json) => _$PostFromJson(json);
 
   Map toJson() => _$PostToJson(this);
-
 }
 
 @JsonSerializable()
-class Meta extends Object {
-
+class PostMeta extends Object {
   @JsonKey(name: 'amp_status')
   final ampStatus;
   @JsonKey(name: 'spay_email')
@@ -57,9 +77,46 @@ class Meta extends Object {
   @JsonKey(name: 'jetpack_publicize_message')
   final jetpack;
 
-  Meta(this.ampStatus, this.spayEmail, this.jetpack);
+  PostMeta(this.ampStatus, this.spayEmail, this.jetpack);
 
-  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+  factory PostMeta.fromJson(Map<String, dynamic> json) =>
+      _$PostMetaFromJson(json);
 
-  Map toJson() => _$MetaToJson(this);
+  Map<String, dynamic> toJson() => _$PostMetaToJson(this);
+}
+
+@JsonSerializable()
+class PostEmbedded extends Object {
+  final Author author;
+  @JsonKey(name: 'wp:term')
+  final List<PostWpTerm> wpTerm;
+
+  PostEmbedded(this.author, this.wpTerm);
+
+  factory PostEmbedded.fromJson(Map<String, dynamic> json) =>
+      _$PostEmbeddedFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PostEmbeddedToJson(this);
+}
+
+@JsonSerializable(createFactory: false, createToJson: false)
+class PostWpTerm extends Object {
+  final List<Taxonomy> category;
+  final List<Taxonomy> postTag;
+
+  PostWpTerm(this.category, this.postTag);
+
+  factory PostWpTerm.fromJson(List<dynamic> wpTerm) {
+    List<Taxonomy> category = wpTerm[0];
+    List<Taxonomy> postTag = wpTerm[1];
+
+    return new PostWpTerm(category, postTag);
+  }
+
+  Map<String,dynamic> toJson() => _$PostWpTermToJson(this);
+
+  Map<String, dynamic> _$PostWpTermToJson(PostWpTerm instance) => <String, dynamic>{
+    'category': instance.category,
+    'post_tag': instance.postTag,
+  };
 }

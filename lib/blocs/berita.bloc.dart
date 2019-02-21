@@ -13,8 +13,8 @@ class BeritaPageBloc extends BlocBase {
     try {
       _newPosts.clear();
       _popularPosts.clear();
-      await getPost().then((data) => filterData(data, sort: SortBy.newPost));
-      await getPost().then((data) => filterData(data, sort: SortBy.popular));
+      await getPost().then((data) => _filterData(data, sort: SortBy.newPost));
+      await getPost().then((data) => _filterData(data, sort: SortBy.popular));
     } on Exception catch (e) {
       throw e;
     }
@@ -41,7 +41,7 @@ class BeritaPageBloc extends BlocBase {
   static final List<Post> _popularPosts = new List();
   static final List<Post> _newPosts = new List();
 
-  void filterData(List data, {SortBy sort}) {
+  void _filterData(List data, {SortBy sort}) {
     if (_postNew.isClosed) return;
     switch (sort) {
       case SortBy.newPost:
