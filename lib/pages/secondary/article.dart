@@ -86,7 +86,7 @@ class ArticlePage extends StatelessWidget {
   }
 
   Widget header(TextTheme font, theme) {
-    final Category _category = appBloc.getCategoryName(_post.categories);
+//    final Category _category = appBloc.getCategoryName(_post.categories);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
@@ -95,17 +95,30 @@ class ArticlePage extends StatelessWidget {
             alignment: Alignment.center,
             child: Padding(
               padding: const EdgeInsets.only(bottom: 10.0),
-              child: Text(
-                _category.name,
-                style: font.title.copyWith(
-                  background: Paint()
-                    ..strokeWidth = 10.0
-                    ..color = theme.brightness == Brightness.light
-                        ? Colors.grey[350]
-                        : Colors.grey[800],
-                  color: theme.brightness == Brightness.light
-                      ? Colors.black
-                      : Colors.white,
+              child: Container(
+                height: 30.0,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  itemCount: _post.embedded.wpTerm.category.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 5.0),
+                      child: Text(
+                        _post.embedded.wpTerm.category[index].name,
+                        style: font.title.copyWith(
+                          background: Paint()
+                            ..strokeWidth = 10.0
+                            ..color = theme.brightness == Brightness.light
+                                ? Colors.grey[350]
+                                : Colors.grey[800],
+                          color: theme.brightness == Brightness.light
+                              ? Colors.black
+                              : Colors.white,
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
@@ -130,18 +143,58 @@ class ArticlePage extends StatelessWidget {
               ),
             ),
           ),
-          Row(
+          Column(
             children: <Widget>[
-              Chip(
-                  label: Text(DateFormat.MMMMd().format(_post.date) +
-                      ' , ' +
-                      DateFormat.jm().format(_post.date)))
+              Text(
+                DateFormat.MMMMd().format(_post.date) +
+                    ' , ' +
+                    DateFormat.jm().format(_post.date),
+                style: font.title.copyWith(
+                  background: Paint()
+                    ..strokeWidth = 10.0
+                    ..color = theme.brightness == Brightness.light
+                        ? Colors.grey[350]
+                        : Colors.grey[800],
+                  color: theme.brightness == Brightness.light
+                      ? Colors.black
+                      : Colors.white,
+                ),
+              ),
+              Divider(),
+              author(font, theme),
             ],
-          )
+          ),
         ],
       ),
     );
   }
+
+  Widget author(TextTheme font, ThemeData theme) => Container(
+        height: 20.0,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          shrinkWrap: true,
+          itemCount: _post.embedded.author.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.only(left: 5.0),
+              child: Text(
+                'Penulis: ' + _post.embedded.author[index].name,
+                style: font.title.copyWith(
+                  background: Paint()
+                    ..strokeWidth = 10.0
+                    ..color = theme.brightness == Brightness.light
+                        ? Colors.grey[350]
+                        : Colors.grey[800],
+                  color: theme.brightness == Brightness.light
+                      ? Colors.black
+                      : Colors.white,
+                ),
+              ),
+            );
+          },
+        ),
+      );
 
   Widget content(TextTheme font, ThemeData theme, context) {
     final textSize = 18.0;

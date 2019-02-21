@@ -12,7 +12,7 @@ class Author extends Object {
   final String link;
   final String slug;
   @JsonKey(name: 'avatar_urls')
-  final List avatarUrl;
+  final Map<String,dynamic> avatarUrl;
   @JsonKey(name: '_links')
   final links;
 

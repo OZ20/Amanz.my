@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 
 Future getPost({String uri = baseUrl , String addUri = '', int offset = 0 , int count = 20}) async {
   try {
-    var response = await http.get(uri + '/posts?$addUri&per_page=$count&offset=$offset');
+    var response = await http.get(uri + '/posts?$addUri&_embed&per_page=$count&offset=$offset');
     if(response.statusCode == 200){
       return jsonDecode(response.body);
     }

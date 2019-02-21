@@ -14,7 +14,7 @@ Author _$AuthorFromJson(Map<String, dynamic> json) {
       json['description'] as String,
       json['link'] as String,
       json['slug'] as String,
-      json['avatar_urls'] as List,
+      json['avatar_urls'] as Map<String, dynamic>,
       json['_links']);
 }
 

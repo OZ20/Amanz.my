@@ -87,9 +87,9 @@ class PostMeta extends Object {
 
 @JsonSerializable()
 class PostEmbedded extends Object {
-  final Author author;
+  final List<Author> author;
   @JsonKey(name: 'wp:term')
-  final List<PostWpTerm> wpTerm;
+  final PostWpTerm wpTerm;
 
   PostEmbedded(this.author, this.wpTerm);
 
@@ -107,8 +107,10 @@ class PostWpTerm extends Object {
   PostWpTerm(this.category, this.postTag);
 
   factory PostWpTerm.fromJson(List<dynamic> wpTerm) {
-    List<Taxonomy> category = wpTerm[0];
-    List<Taxonomy> postTag = wpTerm[1];
+    List<Taxonomy> category = List<Taxonomy>();
+    wpTerm[0].forEach((data) => category.add(Taxonomy.fromJson(data)));
+    List<Taxonomy> postTag = List<Taxonomy>();
+    wpTerm[0].forEach((data) => postTag.add(Taxonomy.fromJson(data)));
 
     return new PostWpTerm(category, postTag);
   }

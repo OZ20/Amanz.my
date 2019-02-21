@@ -78,12 +78,13 @@ Map<String, dynamic> _$PostMetaToJson(PostMeta instance) => <String, dynamic>{
 
 PostEmbedded _$PostEmbeddedFromJson(Map<String, dynamic> json) {
   return PostEmbedded(
-      json['author'] == null
+      (json['author'] as List)
+          ?.map((e) =>
+              e == null ? null : Author.fromJson(e as Map<String, dynamic>))
+          ?.toList(),
+      json['wp:term'] == null
           ? null
-          : Author.fromJson(json['author'] as Map<String, dynamic>),
-      (json['wp:term'] as List)
-          ?.map((e) => e == null ? null : PostWpTerm.fromJson(e as List))
-          ?.toList());
+          : PostWpTerm.fromJson(json['wp:term'] as List));
 }
 
 Map<String, dynamic> _$PostEmbeddedToJson(PostEmbedded instance) =>
