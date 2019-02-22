@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 
 ThemeData appTheme(Brightness brightness) => new ThemeData(
       /// Default [ThemeData]
+      bottomAppBarTheme: BottomAppBarTheme(elevation: 5.0,shape: CircularNotchedRectangle(), color: brightness == Brightness.light ? Colors.white : Colors.black),
       brightness: brightness,
       primaryColorBrightness: brightness,
       primaryColorDark: Colors.black,
       primaryColorLight: Colors.white,
-      primarySwatch: kWhite,
+      primaryColor: brightness == Brightness.light ? Colors.white : Colors.black,
+      accentColor: brightness == Brightness.light ? Colors.blue[400] : Colors.white,
       accentColorBrightness: brightness,
       iconTheme: IconThemeData(
         color: brightness == Brightness.light ? Colors.blue[400] : Colors.white

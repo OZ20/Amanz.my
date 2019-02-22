@@ -17,10 +17,12 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AppPage extends StatefulWidget {
+
   @override
   State createState() {
     return _AppPage();
   }
+
 }
 
 class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticKeepAliveClientMixin {
@@ -128,6 +130,23 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticK
         ),
         BlocProvider<UlasanPageBloc>(
             child: UlasanPage(), bloc: UlasanPageBloc()),
+      ]),
+      bottomNavigationBar: BottomNavigationBar(
+          fixedColor: theme.brightness == Brightness.light ? Colors.blue[400] : Colors.white,
+          type: BottomNavigationBarType.fixed,
+          items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          title: Text(''),
+          icon: Icon(FontAwesomeIcons.igloo),
+        ),
+        BottomNavigationBarItem(
+          title: Text(''),
+          icon: Icon(FontAwesomeIcons.bars),
+        ),
+        BottomNavigationBarItem(
+          title: Text(''),
+          icon: Icon(FontAwesomeIcons.bell),
+        ),
       ]),
     );
   }

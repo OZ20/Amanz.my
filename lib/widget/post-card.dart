@@ -1,10 +1,11 @@
+import 'package:amanzmy/blocs/article.bloc.dart';
+import 'package:amanzmy/blocs/bloc.provider.dart';
 import 'package:amanzmy/model/post.dart';
 import 'package:amanzmy/pages/secondary/article.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:html_unescape/html_unescape.dart';
 import 'package:intl/intl.dart';
-
 
 class PostCard extends StatelessWidget {
   final Post _post;
@@ -19,8 +20,11 @@ class PostCard extends StatelessWidget {
     return Container(
       height: cardHeight,
       child: InkWell(
-        onTap: () => Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => ArticlePage(_post))),
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => BlocProvider<ArticlePageBloc>(
+                  bloc: ArticlePageBloc(),
+                  child: ArticlePage(_post),
+                ))),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
           child: Card(
@@ -52,7 +56,8 @@ class PostCard extends StatelessWidget {
                             ])),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 15.0,right: 15.0, bottom: 15.0),
+                  padding: const EdgeInsets.only(
+                      left: 15.0, right: 15.0, bottom: 15.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,13 +67,19 @@ class PostCard extends StatelessWidget {
                         softWrap: true,
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
-                        style: font.title.copyWith(fontSize: 17, color: Colors.white,),
+                        style: font.title.copyWith(
+                          fontSize: 17,
+                          color: Colors.white,
+                        ),
                       ),
-                      Text(DateFormat.MMMMd().format(_post.date) +
-                          ' , ' +
-                          DateFormat.jm().format(_post.date),
-                          style:
-                              TextStyle(fontSize: 13.0, color: Colors.white, locale: locale)),
+                      Text(
+                          DateFormat.MMMMd().format(_post.date) +
+                              ' , ' +
+                              DateFormat.jm().format(_post.date),
+                          style: TextStyle(
+                              fontSize: 13.0,
+                              color: Colors.white,
+                              locale: locale)),
                     ],
                   ),
                 ),
