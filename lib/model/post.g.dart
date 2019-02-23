@@ -78,6 +78,10 @@ Map<String, dynamic> _$PostMetaToJson(PostMeta instance) => <String, dynamic>{
 
 PostEmbedded _$PostEmbeddedFromJson(Map<String, dynamic> json) {
   return PostEmbedded(
+      (json['wp:featuredmedia'] as List)
+          ?.map((e) =>
+              e == null ? null : Media.fromJson(e as Map<String, dynamic>))
+          ?.toList(),
       (json['author'] as List)
           ?.map((e) =>
               e == null ? null : Author.fromJson(e as Map<String, dynamic>))
@@ -88,4 +92,8 @@ PostEmbedded _$PostEmbeddedFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$PostEmbeddedToJson(PostEmbedded instance) =>
-    <String, dynamic>{'author': instance.author, 'wp:term': instance.wpTerm};
+    <String, dynamic>{
+      'wp:featuredmedia': instance.media,
+      'author': instance.author,
+      'wp:term': instance.wpTerm
+    };

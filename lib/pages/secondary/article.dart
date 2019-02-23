@@ -30,40 +30,35 @@ class ArticlePage extends StatelessWidget {
                 pinned: true,
                 expandedHeight: appBarSpaceHeight,
                 flexibleSpace: FlexibleSpaceBar(
-                  background: _post.jpFeaturedMedia == null
-                      ? Container(
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                  colors: [Colors.blue, Colors.white],
-                                  begin: Alignment.centerLeft,
-                                  tileMode: TileMode.mirror)),
-                        )
-                      : Stack(
-                          children: <Widget>[
-                            Container(
-                              height: 300.0,
-                              child: CachedNetworkImage(
-                                  errorWidget: Container(
-                                    color: Colors.grey,
-                                  ),
-                                  width: size.width,
-                                  fit: BoxFit.cover,
-                                  imageUrl: _post.jpFeaturedMedia),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  gradient: theme.brightness == Brightness.light
-                                      ? LinearGradient(colors: [
-                                          Color(0xFF373B44).withOpacity(.8),
-                                          Color(0xFF4286f4).withOpacity(.7),
-                                        ])
-                                      : LinearGradient(colors: [
-                                          Color(0xFFbdc3c7).withOpacity(.8),
-                                          Color(0xFF2c3e50).withOpacity(.9),
-                                        ])),
-                            ),
-                          ],
+                  background: Hero(
+                    tag: _post.id,
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          height: 300.0,
+                          child: CachedNetworkImage(
+                              errorWidget: Container(
+                                color: Colors.grey,
+                              ),
+                              width: size.width,
+                              fit: BoxFit.cover,
+                              imageUrl: _post.jpFeaturedMedia),
                         ),
+                        Container(
+                          decoration: BoxDecoration(
+                              gradient: theme.brightness == Brightness.light
+                                  ? LinearGradient(colors: [
+                                      Color(0xFF373B44).withOpacity(.5),
+                                      Color(0xFF4286f4).withOpacity(.4),
+                                    ])
+                                  : LinearGradient(colors: [
+                                      Color(0xFFbdc3c7).withOpacity(.5),
+                                      Color(0xFF2c3e50).withOpacity(.6),
+                                    ])),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -97,8 +92,11 @@ class ArticlePage extends StatelessWidget {
                 ? Colors.blue
                 : Colors.white,
           ),
-          onPressed: () => _scaffoldKey.currentState
-              .showSnackBar(SnackBar(content: Text('Akan datang')))),
+          onPressed: () {
+            _scaffoldKey.currentState.removeCurrentSnackBar();
+            return _scaffoldKey.currentState
+              .showSnackBar(SnackBar(content: Text('Akan datang')));
+          }),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       bottomNavigationBar: BottomAppBar(
         child: Row(
@@ -118,7 +116,8 @@ class ArticlePage extends StatelessWidget {
     );
   }
 
-  Widget header(TextTheme font, theme) {
+  Widget header(TextTheme font, ThemeData theme) {
+    final dividerColour = Colors.grey[400];
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
@@ -134,21 +133,27 @@ class ArticlePage extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: _post.embedded.wpTerm.category.length,
                   itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(left: 5.0),
-                      child: Text(
-                        _post.embedded.wpTerm.category[index].name,
-                        style: font.title.copyWith(
-                          background: Paint()
-                            ..strokeWidth = 10.0
-                            ..color = theme.brightness == Brightness.light
-                                ? Colors.grey[350]
-                                : Colors.grey[800],
-                          color: theme.brightness == Brightness.light
-                              ? Colors.black
-                              : Colors.white,
+                    return Row(
+                      children: <Widget>[
+                        Text(
+                          _post.embedded.wpTerm.category[index].name,
+                          style: font.display1.copyWith(
+                            background: Paint()
+                              ..strokeWidth = 10.0
+                              ..color = theme.brightness == Brightness.light
+                                  ? Colors.grey[350]
+                                  : Colors.grey[800],
+                            color: theme.brightness == Brightness.light
+                                ? Colors.black
+                                : Colors.white,
+                          ),
                         ),
-                      ),
+                        Visibility(
+                          visible: index !=
+                              _post.embedded.wpTerm.category.length - 1,
+                          child: VerticalDivider(color: dividerColour),
+                        )
+                      ],
                     );
                   },
                 ),
@@ -181,7 +186,7 @@ class ArticlePage extends StatelessWidget {
                 DateFormat.MMMMd().format(_post.date) +
                     ' , ' +
                     DateFormat.jm().format(_post.date),
-                style: font.title.copyWith(
+                style: font.display1.copyWith(
                   background: Paint()
                     ..strokeWidth = 10.0
                     ..color = theme.brightness == Brightness.light
@@ -192,7 +197,9 @@ class ArticlePage extends StatelessWidget {
                       : Colors.white,
                 ),
               ),
-              Divider(),
+              Divider(
+                color: dividerColour,
+              ),
               author(font, theme),
             ],
           ),
@@ -212,7 +219,7 @@ class ArticlePage extends StatelessWidget {
               padding: const EdgeInsets.only(left: 5.0),
               child: Text(
                 'Penulis: ' + _post.embedded.author[index].name,
-                style: font.title.copyWith(
+                style: font.display1.copyWith(
                   background: Paint()
                     ..strokeWidth = 10.0
                     ..color = theme.brightness == Brightness.light
@@ -264,12 +271,12 @@ class ArticlePage extends StatelessWidget {
                       ]),
                   em: font.body1.copyWith(
                       fontStyle: FontStyle.italic, fontSize: snapshot.data),
-                  h1: font.title,
-                  h2: font.title,
-                  h3: font.title,
-                  h4: font.title,
-                  h5: font.title,
-                  h6: font.title,
+                  h1: font.title.copyWith(fontSize: snapshot.data - 1.0),
+                  h2: font.title.copyWith(fontSize: snapshot.data - 1.0),
+                  h3: font.title.copyWith(fontSize: snapshot.data - 1.0),
+                  h4: font.title.copyWith(fontSize: snapshot.data - 1.0),
+                  h5: font.title.copyWith(fontSize: snapshot.data - 1.0),
+                  h6: font.title.copyWith(fontSize: snapshot.data - 1.0),
                   blockquotePadding: 15.0,
                   blockquoteDecoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
@@ -279,6 +286,10 @@ class ArticlePage extends StatelessWidget {
                   ),
                   blockSpacing: 25.0,
                   img: TextStyle(),
+                  codeblockDecoration: BoxDecoration(),
+                  horizontalRuleDecoration: BoxDecoration(
+                      border:
+                          Border.all(width: 1.0, color: theme.backgroundColor)),
                 ),
                 data: html2md.convert(_post.content['rendered']),
                 onTapLink: (data) => Navigator.push(

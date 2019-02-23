@@ -1,11 +1,13 @@
 import 'package:amanzmy/blocs/app.bloc.dart';
 import 'package:amanzmy/blocs/bloc.provider.dart';
 import 'package:amanzmy/blocs/berita.bloc.dart';
+import 'package:amanzmy/blocs/category.bloc.dart';
 import 'package:amanzmy/blocs/promo.bloc.dart';
 import 'package:amanzmy/blocs/tips.bloc.dart';
 import 'package:amanzmy/blocs/tv.bloc.dart';
 import 'package:amanzmy/blocs/ulasan.bloc.dart';
 import 'package:amanzmy/pages/primary/berita.dart';
+import 'package:amanzmy/pages/primary/category.dart';
 import 'package:amanzmy/pages/primary/promo.dart';
 import 'package:amanzmy/pages/primary/tips.dart';
 import 'package:amanzmy/pages/primary/tv.dart';
@@ -17,16 +19,16 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AppPage extends StatefulWidget {
-
   @override
   State createState() {
     return _AppPage();
   }
-
 }
 
-class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticKeepAliveClientMixin {
+class _AppPage extends State<AppPage>
+    with TickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   TabController _tabController;
+  int _currentIndex = 0;
 
   @override
   void initState() {
@@ -53,34 +55,7 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticK
         child: Drawer(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
-//            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Align(
-                alignment: Alignment.center,
-                child: ListView(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  children: <Widget>[
-                    ListTile(
-                        onTap: () {
-                          Navigator.pop(context);
-                          setState(() {
-                            _tabController.animateTo(0);
-                          });
-                        },
-                        title: MenuItem(
-                            'BERITA', FontAwesomeIcons.solidNewspaper)),
-                    ListTile(
-                        onTap: () {
-                          Navigator.pop(context);
-                          setState(() {
-                            _tabController.animateTo(1);
-                          });
-                        },
-                        title: MenuItem('ULASAN', FontAwesomeIcons.book)),
-                  ],
-                ),
-              ),
               Align(
                 alignment: Alignment.bottomCenter,
                 heightFactor: 5.5,
@@ -90,7 +65,10 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticK
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       InkWell(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage())),
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SettingsPage())),
                         child: Row(
                           children: <Widget>[
                             Icon(Icons.settings),
@@ -123,31 +101,45 @@ class _AppPage extends State<AppPage> with TickerProviderStateMixin , AutomaticK
       ),
       body: TabBarView(
           physics: NeverScrollableScrollPhysics(),
-          controller: _tabController, children: [
-        BlocProvider<BeritaPageBloc>(
-          child: BeritaPage(),
-          bloc: BeritaPageBloc(),
-        ),
-        BlocProvider<UlasanPageBloc>(
-            child: UlasanPage(), bloc: UlasanPageBloc()),
-      ]),
+          controller: _tabController,
+          children: [
+            BlocProvider<BeritaPageBloc>(
+              child: BeritaPage(),
+              bloc: BeritaPageBloc(),
+            ),
+            BlocProvider<CategoryPageBloc>(
+                child: CategoryPage(), bloc: CategoryPageBloc()),
+          ]),
       bottomNavigationBar: BottomNavigationBar(
-          fixedColor: theme.brightness == Brightness.light ? Colors.blue[400] : Colors.white,
+          currentIndex: _currentIndex,
+          onTap: (index) => setState(() {
+                _currentIndex = index;
+                if (index == 2) {
+                  appBloc.appScaffoldKey.currentState.hideCurrentSnackBar();
+                  appBloc.appScaffoldKey.currentState
+                      .showSnackBar(SnackBar(content: Text('Akan datang')));
+                } else {
+                  _tabController.animateTo(_currentIndex);
+                }
+              }),
+          fixedColor: theme.brightness == Brightness.light
+              ? Colors.blue[400]
+              : Colors.white,
           type: BottomNavigationBarType.fixed,
           items: <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          title: Text(''),
-          icon: Icon(FontAwesomeIcons.igloo),
-        ),
-        BottomNavigationBarItem(
-          title: Text(''),
-          icon: Icon(FontAwesomeIcons.bars),
-        ),
-        BottomNavigationBarItem(
-          title: Text(''),
-          icon: Icon(FontAwesomeIcons.bell),
-        ),
-      ]),
+            BottomNavigationBarItem(
+              title: Text(''),
+              icon: Icon(FontAwesomeIcons.fortAwesomeAlt),
+            ),
+            BottomNavigationBarItem(
+              title: Text(''),
+              icon: Icon(FontAwesomeIcons.bars),
+            ),
+            BottomNavigationBarItem(
+              title: Text(''),
+              icon: Icon(FontAwesomeIcons.bell),
+            ),
+          ]),
     );
   }
 

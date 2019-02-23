@@ -1,4 +1,5 @@
 import 'package:amanzmy/model/author.dart';
+import 'package:amanzmy/model/media.dart';
 import 'package:amanzmy/model/taxonomy.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -87,11 +88,13 @@ class PostMeta extends Object {
 
 @JsonSerializable()
 class PostEmbedded extends Object {
+  @JsonKey(name: 'wp:featuredmedia')
+  final List<Media> media;
   final List<Author> author;
   @JsonKey(name: 'wp:term')
   final PostWpTerm wpTerm;
 
-  PostEmbedded(this.author, this.wpTerm);
+  PostEmbedded(this.media, this.author, this.wpTerm);
 
   factory PostEmbedded.fromJson(Map<String, dynamic> json) =>
       _$PostEmbeddedFromJson(json);
@@ -115,10 +118,11 @@ class PostWpTerm extends Object {
     return new PostWpTerm(category, postTag);
   }
 
-  Map<String,dynamic> toJson() => _$PostWpTermToJson(this);
+  Map<String, dynamic> toJson() => _$PostWpTermToJson(this);
 
-  Map<String, dynamic> _$PostWpTermToJson(PostWpTerm instance) => <String, dynamic>{
-    'category': instance.category,
-    'post_tag': instance.postTag,
-  };
+  Map<String, dynamic> _$PostWpTermToJson(PostWpTerm instance) =>
+      <String, dynamic>{
+        'category': instance.category,
+        'post_tag': instance.postTag,
+      };
 }

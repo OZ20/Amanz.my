@@ -12,7 +12,7 @@ class BeritaPage extends StatefulWidget {
   BeritaPage();
 }
 
-class _BeritaPage extends State<BeritaPage> with TickerProviderStateMixin {
+class _BeritaPage extends State<BeritaPage> with TickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   TabController _tabController;
   BeritaPageBloc _bloc;
 
@@ -22,6 +22,10 @@ class _BeritaPage extends State<BeritaPage> with TickerProviderStateMixin {
     _tabController = new TabController(length: 2, vsync: this, initialIndex: 0);
     _bloc = BlocProvider.of<BeritaPageBloc>(context)..init();
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 
   @override
   void dispose() {

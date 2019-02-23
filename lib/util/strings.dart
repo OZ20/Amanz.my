@@ -1,7 +1,8 @@
 
 const title = 'Amanz';
 const baseUrl = 'https://amanz.my/wp-json/wp/v2';
-const categoriesUrl = '/categories';
+const searchUrl = 'search=';
+const categoriesUrl = '/categories=';
 const mediaUrl = '$baseUrl/media/193155';
 const ulasanUrl= 'tags=2274';
 const promoUrl= 'tags=41001';

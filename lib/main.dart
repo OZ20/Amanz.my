@@ -1,6 +1,13 @@
 import 'package:amanzmy/blocs/app.bloc.dart';
+import 'package:amanzmy/blocs/berita.bloc.dart';
 import 'package:amanzmy/blocs/bloc.provider.dart';
+import 'package:amanzmy/blocs/category.bloc.dart';
+import 'package:amanzmy/blocs/ulasan.bloc.dart';
 import 'package:amanzmy/pages/primary/app.dart';
+import 'package:amanzmy/pages/primary/berita.dart';
+import 'package:amanzmy/pages/primary/category.dart';
+import 'package:amanzmy/pages/primary/ulasan.dart';
+import 'package:amanzmy/pages/secondary/settings.dart';
 import 'package:amanzmy/util/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
@@ -22,6 +29,7 @@ class MyApp extends StatelessWidget {
       defaultBrightness: Brightness.light,
       data: (Brightness brightness) => appTheme(brightness),
       themedWidgetBuilder: (context, theme) => MaterialApp(
+              routes: routes,
               localizationsDelegates: [
                 // ... app-specific localization delegate[s] here
                 GlobalMaterialLocalizations.delegate,
@@ -38,3 +46,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+final routes = {
+  'berita':(BuildContext context) => BlocProvider(child: BeritaPage(), bloc: BeritaPageBloc()),
+  'ulasan':(BuildContext context) => BlocProvider(child: UlasanPage(), bloc: UlasanPageBloc()),
+  'category':(BuildContext context) => BlocProvider(child: CategoryPage(), bloc: CategoryPageBloc()),
+  'setting':(BuildContext context) => SettingsPage(),
+};

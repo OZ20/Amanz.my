@@ -107,8 +107,6 @@ class HomeBody extends StatelessWidget{
   Widget pageBody(SortBy sort) {
     print(_bloc.toString() + sort.toString());
     switch (sort) {
-      case SortBy.newPost:
-        return mainWidget(_bloc.postNew, sort);
       case SortBy.popular:
         return mainWidget(_bloc.postPopular, sort);
       default:
@@ -126,6 +124,7 @@ class HomeBody extends StatelessWidget{
               onNotification: (notify) =>
                   _handleScrollNotification(notify, sort),
               child: RefreshIndicator(
+                displacement: 10,
                 color: Theme.of(context).brightness == Brightness.light
                     ? Colors.blue
                     : Colors.white,
