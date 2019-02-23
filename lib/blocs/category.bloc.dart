@@ -1,13 +1,16 @@
 import 'package:amanzmy/model/post.dart';
 import 'package:amanzmy/util/search-state.dart';
 import 'package:amanzmy/util/strings.dart';
+import 'package:flutter/material.dart';
 import 'bloc.provider.dart';
 import 'package:amanzmy/apis/amanz.api.dart';
 import 'package:rxdart/rxdart.dart';
 import 'dart:async';
 
 class CategoryPageBloc extends BlocBase {
-  CategoryPageBloc() {
+  CategoryPageBloc();
+
+  void init() {
     _querySubject
         .distinct()
         .debounce(Duration(milliseconds: 450))
@@ -15,6 +18,8 @@ class CategoryPageBloc extends BlocBase {
   }
 
   String get title => 'category';
+
+  PageStorageKey get scrollViewKey => PageStorageKey(title);
 
   ///
   /// Loading initial subject

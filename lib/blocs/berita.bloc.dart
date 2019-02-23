@@ -4,6 +4,7 @@ import 'package:amanzmy/apis/amanz.api.dart';
 import 'package:amanzmy/blocs/bloc.provider.dart';
 import 'package:amanzmy/model/post.dart';
 import 'package:amanzmy/util/sort.dart';
+import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 
 class BeritaPageBloc extends BlocBase {
@@ -25,6 +26,8 @@ class BeritaPageBloc extends BlocBase {
   bool get loadMore => _loading;
 
   String get title => 'BERITA';
+
+  PageStorageKey get scrollViewKey => PageStorageKey(title);
 
   final Subject<List<Post>> _postNew = new BehaviorSubject();
 

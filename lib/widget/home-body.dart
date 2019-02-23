@@ -6,14 +6,12 @@ import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomeBody extends StatelessWidget{
-
+class HomeBody extends StatelessWidget {
   final TabController _tabController;
   final _bloc;
   final ScrollController _scrollController = new ScrollController();
 
   HomeBody(this._tabController, this._bloc);
-
 
   @override
   Widget build(context) {
@@ -26,15 +24,21 @@ class HomeBody extends StatelessWidget{
             return <Widget>[
               SliverAppBar(
                 centerTitle: true,
-                leading: InkWell(
-                  onTap: () => appBloc.appScaffoldKey.currentState.openDrawer(),
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.circular(30.0),
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
-                        child: Image.asset('assets/img/amanz-logo-single.jpg'),
-                      )),
-                ),
+                leading: _bloc.title == 'BERITA'
+                    ? InkWell(
+                        onTap: () =>
+                            appBloc.appScaffoldKey.currentState.openDrawer(),
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(30.0),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 10.0),
+                              child: Image.asset(
+                                  'assets/img/amanz-logo-single.jpg'),
+                            )),
+                      )
+                    : IconButton(
+                        icon: Icon(Icons.arrow_back),
+                        onPressed: () => Navigator.pop(context)),
                 title: Text(
                   _bloc.title,
                   style: font.headline.copyWith(
@@ -100,8 +104,7 @@ class HomeBody extends StatelessWidget{
             pageBody(SortBy.newPost),
             pageBody(SortBy.popular),
           ]),
-        )
-    );
+        ));
   }
 
   Widget pageBody(SortBy sort) {
@@ -157,8 +160,7 @@ class HomeBody extends StatelessWidget{
       if (notification.metrics.pixels >=
           (notification.metrics.maxScrollExtent -
               (notification.metrics.maxScrollExtent * 0.2))) {
-        if (!_bloc.loadMore)
-          _bloc.getMorePost(sort);
+        if (!_bloc.loadMore) _bloc.getMorePost(sort);
       }
     }
     return false;

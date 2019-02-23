@@ -13,12 +13,12 @@ if (flutterRoot == null) {
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
 if (flutterVersionCode == null) {
-    flutterVersionCode = '3'
+    flutterVersionCode = '2'
 }
 
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
-    flutterVersionName = '1.2'
+    flutterVersionName = '1.1'
 }
 
 apply plugin: 'com.android.application'
@@ -39,14 +39,14 @@ android {
     }
 
     defaultConfig {
-//        ndk {
-//            if (project.hasProperty('target-platform') &&
-//                    project.property('target-platform') == 'android-arm64') {
-//                abiFilters 'arm64-v8a'
-//            } else {
-//                abiFilters 'armeabi-v7a'
-//            }
-//        }
+        ndk {
+            if (project.hasProperty('target-platform') &&
+                    project.property('target-platform') == 'android-arm64') {
+                abiFilters 'arm64-v8a'
+            } else {
+                abiFilters 'armeabi-v7a'
+            }
+        }
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "oz20.amanzmy"
         minSdkVersion 16
