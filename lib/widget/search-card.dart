@@ -2,8 +2,8 @@ import 'package:amanzmy/blocs/article.bloc.dart';
 import 'package:amanzmy/blocs/bloc.provider.dart';
 import 'package:amanzmy/model/post.dart';
 import 'package:amanzmy/pages/secondary/article.dart';
-import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
 import 'package:html_unescape/html_unescape.dart';
 
 class SearchCard extends StatelessWidget {
@@ -73,8 +73,8 @@ class SearchCard extends StatelessWidget {
                             height: 80.0,
                             width: 80.0,
                             placeholder: CircularProgressIndicator(),
-                            imageUrl:
-                                _post.embedded.media[0].media.thumbnail.sourceUrl)
+                            imageUrl: _post
+                                .embedded.media[0].media.thumbnail.sourceUrl)
                         : Container(
                             height: 80.0,
                             width: 80.0,

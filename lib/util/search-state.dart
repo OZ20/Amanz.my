@@ -1,9 +1,1 @@
-
-enum SearchState {
-
-  onLoading,
-  onError,
-  onSuccess,
-  onInitial
-
-}
+enum SearchState { onLoading, onError, onSuccess, onInitial }

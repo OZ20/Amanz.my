@@ -1,10 +1,13 @@
-import 'bloc.provider.dart';
 import 'package:rxdart/rxdart.dart';
 
-class ArticlePageBloc extends BlocBase {
+import 'bloc.provider.dart';
 
+class ArticlePageBloc extends BlocBase {
   double _textDefaultSize = 18;
 
+  ///
+  /// Text sizing subject
+  /// increment & decrement on button tap
   Subject<double> _incrementSize = PublishSubject();
 
   Sink<double> get incrementSizeSink => _incrementSize.sink;
@@ -18,6 +21,15 @@ class ArticlePageBloc extends BlocBase {
   Sink<double> get _textSizeSink => _textSizeSubject.sink;
 
   Stream<double> get textSizeStream => _textSizeSubject.stream;
+
+  ///
+  /// BottomAppBar change on Web tabView
+  ///
+  Subject<int> _tabControllerIndex = PublishSubject();
+
+  Sink<int> get sinkTabControllerIndex => _tabControllerIndex.sink;
+
+  Stream<int> get streamTabControllerIndex => _tabControllerIndex.stream;
 
   ArticlePageBloc() {
     _incrementSize.listen((size) => _textSizeSink.add(++_textDefaultSize));

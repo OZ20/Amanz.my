@@ -4,7 +4,6 @@ import 'package:amanzmy/widget/home-body.dart';
 import 'package:flutter/material.dart';
 
 class UlasanPage extends StatefulWidget {
-
   @override
   State createState() {
     return _UlasanPage();

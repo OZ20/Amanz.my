@@ -63,7 +63,7 @@ class TipsPageBloc extends BlocBase {
           _loading = true;
           await getPost(addUri: tipsUrl, offset: _newPosts.length)
               .then((data) =>
-              data.forEach((post) => _newPosts.add(Post.fromJson(post))))
+                  data.forEach((post) => _newPosts.add(Post.fromJson(post))))
               .whenComplete(() => _loading = false);
           sinkPostNew.add(_newPosts);
           break;
@@ -71,7 +71,7 @@ class TipsPageBloc extends BlocBase {
           _loading = true;
           await getPost(addUri: tipsUrl, offset: _popularPosts.length)
               .then((data) => data
-              .forEach((post) => _popularPosts.add(Post.fromJson(post))))
+                  .forEach((post) => _popularPosts.add(Post.fromJson(post))))
               .whenComplete(() => _loading = false);
           sinkPostPopular.add(_popularPosts);
           break;

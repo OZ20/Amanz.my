@@ -9,9 +9,8 @@ import 'package:amanzmy/pages/primary/category.dart';
 import 'package:amanzmy/pages/primary/ulasan.dart';
 import 'package:amanzmy/pages/secondary/settings.dart';
 import 'package:amanzmy/util/app.theme.dart';
-import 'package:flutter/material.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   try {
@@ -29,27 +28,21 @@ class MyApp extends StatelessWidget {
       defaultBrightness: Brightness.light,
       data: (Brightness brightness) => appTheme(brightness),
       themedWidgetBuilder: (context, theme) => MaterialApp(
-              routes: routes,
-              localizationsDelegates: [
-                // ... app-specific localization delegate[s] here
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-              ],
-              supportedLocales: [
-                const Locale('en', 'US'), // English
-                const Locale('my', 'MY'), // Malay
-              ],
-              title: 'Amanz.my',
-              theme: theme,
-              home: BlocProvider<AppPageBloc>(
-                  child: AppPage(), bloc: AppPageBloc())),
+          routes: routes,
+          title: 'Amanz.my',
+          theme: theme,
+          home:
+              BlocProvider<AppPageBloc>(child: AppPage(), bloc: AppPageBloc())),
     );
   }
 }
 
 final routes = {
-  'berita':(BuildContext context) => BlocProvider(child: BeritaPage(), bloc: BeritaPageBloc()),
-  'ulasan':(BuildContext context) => BlocProvider(child: UlasanPage(), bloc: UlasanPageBloc()),
-  'category':(BuildContext context) => BlocProvider(child: CategoryPage(), bloc: CategoryPageBloc()),
-  'setting':(BuildContext context) => SettingsPage(),
+  'berita': (BuildContext context) =>
+      BlocProvider(child: BeritaPage(), bloc: BeritaPageBloc()),
+  'ulasan': (BuildContext context) =>
+      BlocProvider(child: UlasanPage(), bloc: UlasanPageBloc()),
+  'category': (BuildContext context) =>
+      BlocProvider(child: CategoryPage(), bloc: CategoryPageBloc()),
+  'setting': (BuildContext context) => SettingsPage(),
 };

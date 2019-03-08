@@ -4,7 +4,6 @@ part 'taxonomy.g.dart';
 
 @JsonSerializable()
 class Taxonomy extends Object {
-
   final num id;
   final String link;
   final String name;
@@ -15,7 +14,8 @@ class Taxonomy extends Object {
 
   Taxonomy(this.id, this.link, this.name, this.slug, this.taxonomy, this.links);
 
-  factory Taxonomy.fromJson(Map<String,dynamic> json ) => _$TaxonomyFromJson(json);
+  factory Taxonomy.fromJson(Map<String, dynamic> json) =>
+      _$TaxonomyFromJson(json);
 
-  Map<String,dynamic> toJson() => _$TaxonomyToJson(this);
+  Map<String, dynamic> toJson() => _$TaxonomyToJson(this);
 }

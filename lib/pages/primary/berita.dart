@@ -12,7 +12,8 @@ class BeritaPage extends StatefulWidget {
   BeritaPage();
 }
 
-class _BeritaPage extends State<BeritaPage> with TickerProviderStateMixin, AutomaticKeepAliveClientMixin {
+class _BeritaPage extends State<BeritaPage>
+    with TickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   TabController _tabController;
   BeritaPageBloc _bloc;
 

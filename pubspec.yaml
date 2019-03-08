@@ -23,7 +23,9 @@ dependencies:
   html2md: ^0.3.0
   flutter_markdown: ^0.2.0
   html_unescape: ^1.0.1+2
+  # web-view
   flutter_webview_plugin: ^0.3.0+2
+  webview_flutter: ^0.3.3+1
   dynamic_theme: ^1.0.0
   bubble_tab_indicator: ^0.1.4
   font_awesome_flutter: ^8.4.0
@@ -91,11 +93,32 @@ flutter:
   # see https://flutter.io/custom-fonts/#from-packages
 
   fonts:
-    - family: BebasNues
+    - family: BebasNeue
       fonts:
-        - asset: assets/fonts/BebasNeue-Regular.ttf
+        - asset: assets/fonts/BebasNeue/BebasNeue-Regular.ttf
 
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto-Light.ttf
-        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato/Lato-Light.ttf
+        - asset: assets/fonts/Lato/Lato-Regular.ttf
+        - asset: assets/fonts/Lato/Lato-Bold.ttf
+
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
+        - asset: assets/fonts/Montserrat/Montserrat-Light.ttf
+        - asset: assets/fonts/Montserrat/Montserrat-Medium.ttf
+        - asset: assets/fonts/Montserrat/Montserrat-Regular.ttf
+
+    - family: OpenSans
+      fonts:
+       - asset: assets/fonts/OpenSans/OpenSans-Bold.ttf
+       - asset: assets/fonts/OpenSans/OpenSans-Light.ttf
+       - asset: assets/fonts/OpenSans/OpenSans-Regular.ttf

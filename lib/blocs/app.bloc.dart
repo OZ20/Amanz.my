@@ -14,8 +14,7 @@ class AppPageBloc extends BlocBase {
     this._init();
   }
 
-  void _init() async {
-  }
+  void _init() async {}
 
   @override
   void dispose() {}

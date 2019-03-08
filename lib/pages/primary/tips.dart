@@ -4,7 +4,6 @@ import 'package:amanzmy/widget/home-body.dart';
 import 'package:flutter/material.dart';
 
 class TipsPage extends StatefulWidget {
-
   @override
   State createState() {
     return _TipsPage();

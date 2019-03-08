@@ -4,7 +4,6 @@ part 'category.g.dart';
 
 @JsonSerializable()
 class Category extends Object {
-
   final id;
   final count;
   final description;
@@ -16,10 +15,8 @@ class Category extends Object {
   Category(this.id, this.count, this.description, this.link, this.name,
       this.slug, this.parent);
 
-  factory Category.fromJson(Map<String,dynamic> json) => _$CategoryFromJson(json);
+  factory Category.fromJson(Map<String, dynamic> json) =>
+      _$CategoryFromJson(json);
 
-  Map<String,dynamic> toJson() => _$CategoryToJson(this);
-
+  Map<String, dynamic> toJson() => _$CategoryToJson(this);
 }
-
-

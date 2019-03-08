@@ -38,7 +38,9 @@ class SearchBar extends StatelessWidget {
             size: 12.0,
           ),
           filled: true,
-          fillColor: theme.brightness == Brightness.light ? Colors.grey[200] : Colors.grey[900]),
+          fillColor: theme.brightness == Brightness.light
+              ? Colors.grey[200]
+              : Colors.grey[900]),
     );
   }
 

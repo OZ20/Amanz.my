@@ -1,6 +1,6 @@
 import 'package:amanzmy/widget/menu-item.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -16,11 +16,11 @@ class SettingsPage extends StatelessWidget {
           children: <Widget>[
             ListTile(
                 onTap: () => showAboutDialog(
-                  context: context,
-                  applicationName: 'Amanz',
-                  applicationVersion: 'alpha v0.22',
-                  applicationLegalese: 'Untuk Amanz & Komuniti',
-                ),
+                      context: context,
+                      applicationName: 'Amanz',
+                      applicationVersion: 'alpha v0.22',
+                      applicationLegalese: 'Untuk Amanz & Komuniti',
+                    ),
                 title: MenuItem('versi', FontAwesomeIcons.codeBranch))
           ],
         ),

@@ -1,12 +1,13 @@
-import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
 
 class RadialExpansion extends StatelessWidget {
   RadialExpansion({
     Key key,
     this.maxRadius,
     this.child,
-  }) : clipRectSize = 2.0 * (maxRadius / math.sqrt2),
+  })  : clipRectSize = 2.0 * (maxRadius / math.sqrt2),
         super(key: key);
 
   final double maxRadius;

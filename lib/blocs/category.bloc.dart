@@ -1,11 +1,13 @@
+import 'dart:async';
+
+import 'package:amanzmy/apis/amanz.api.dart';
 import 'package:amanzmy/model/post.dart';
 import 'package:amanzmy/util/search-state.dart';
 import 'package:amanzmy/util/strings.dart';
 import 'package:flutter/material.dart';
-import 'bloc.provider.dart';
-import 'package:amanzmy/apis/amanz.api.dart';
 import 'package:rxdart/rxdart.dart';
-import 'dart:async';
+
+import 'bloc.provider.dart';
 
 class CategoryPageBloc extends BlocBase {
   CategoryPageBloc();

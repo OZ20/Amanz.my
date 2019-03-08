@@ -1,4 +1,3 @@
-import 'package:amanzmy/util/colors.dart';
 import 'package:flutter/material.dart';
 
 ThemeData appTheme(Brightness brightness) => new ThemeData(
@@ -43,15 +42,24 @@ ThemeData appTheme(Brightness brightness) => new ThemeData(
       /// Chip Theme
       ///
       chipTheme: ChipThemeData(
-          backgroundColor: brightness == Brightness.light ? Colors.blue[400] : Colors.grey[900],
-          disabledColor:  brightness == Brightness.light ? Colors.blue[400] : Colors.grey[900],
-          selectedColor:  brightness == Brightness.light ? Colors.blue[400] : Colors.grey[900],
-          secondarySelectedColor:  brightness == Brightness.light ? Colors.blue[400] : Colors.grey[900],
+          backgroundColor: brightness == Brightness.light
+              ? Colors.blue[400]
+              : Colors.grey[900],
+          disabledColor: brightness == Brightness.light
+              ? Colors.blue[400]
+              : Colors.grey[900],
+          selectedColor: brightness == Brightness.light
+              ? Colors.blue[400]
+              : Colors.grey[900],
+          secondarySelectedColor: brightness == Brightness.light
+              ? Colors.blue[400]
+              : Colors.grey[900],
           labelPadding: const EdgeInsets.symmetric(horizontal: 4, vertical: 0),
           padding: const EdgeInsets.all(4),
           shape: StadiumBorder(),
           labelStyle: TextStyle(fontSize: 13.0, fontWeight: FontWeight.normal),
-          secondaryLabelStyle: TextStyle(fontSize: 13.0, fontWeight: FontWeight.normal),
+          secondaryLabelStyle:
+              TextStyle(fontSize: 13.0, fontWeight: FontWeight.normal),
           brightness: brightness),
 
       ///
@@ -73,6 +81,6 @@ ThemeData appTheme(Brightness brightness) => new ThemeData(
             fontWeight: FontWeight.bold),
         title: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
         display1: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
-        body1: TextStyle(fontSize: 13.0, fontWeight: FontWeight.w200),
+        body1: TextStyle(fontSize: 13.0, fontWeight: FontWeight.w300),
       ),
     );

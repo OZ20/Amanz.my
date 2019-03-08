@@ -1,5 +1,1 @@
-
-enum SortBy {
-  popular,
-  newPost
-}
+enum SortBy { popular, newPost }

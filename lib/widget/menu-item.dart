@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 
 class MenuItem extends StatelessWidget {
-
   final itemName;
   final itemIcon;
 
@@ -12,12 +10,13 @@ class MenuItem extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Icon(itemIcon),
-        SizedBox(width: 15.0,),
+        SizedBox(
+          width: 15.0,
+        ),
         Text(itemName),
       ],
     );
   }
 
   MenuItem(this.itemName, this.itemIcon);
-
 }
