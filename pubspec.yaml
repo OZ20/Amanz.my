@@ -7,7 +7,7 @@ description: Native mobile app for amanz.my
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
 # Read more about versioning at semver.org.
-version: 1.0.0+1
+version: 1.1.0
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
@@ -24,18 +24,24 @@ dependencies:
   flutter_markdown: ^0.2.0
   html_unescape: ^1.0.1+2
   # web-view
-  flutter_webview_plugin: ^0.3.0+2
+  flutter_html: ^0.9.4
+  flutter_webview_plugin: ^0.3.10+1
   webview_flutter: ^0.3.3+1
+  # vid_player
+  youtube_player: ^3.5.0
+  # utils
+  parallax_image: ^0.3.1+1
+  gradient_text: ^1.0.2
   dynamic_theme: ^1.0.0
   bubble_tab_indicator: ^0.1.4
   font_awesome_flutter: ^8.4.0
-  cached_network_image: ^0.5.1
+  cached_network_image: ^2.0.0
   rxdart: ^0.20.0
   http: ^0.12.0+1
   cupertino_icons: ^0.1.2
   # internationalization
   intl_translation: ^0.17.3
-  intl: ^0.15.7
+  intl: ^0.16.1
 
 dev_dependencies:
 
@@ -65,6 +71,7 @@ flutter:
   assets:
     - assets/img/amanz-logo-big.png
     - assets/img/amanz-logo-single.jpg
+    - assets/img/amanz-transparent.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

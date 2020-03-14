@@ -6,16 +6,18 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:html_unescape/html_unescape.dart';
 import 'package:intl/intl.dart';
+import 'package:parallax_image/parallax_image.dart';
 
 class PostCard extends StatelessWidget {
   final Post _post;
+  final ScrollController _scrollController;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final font = theme.textTheme;
     final size = MediaQuery.of(context).size;
-    final cardHeight = 250.0;
+    final cardHeight = size.height * (1/3);
     return Container(
       height: cardHeight,
       child: InkWell(
@@ -27,39 +29,45 @@ class PostCard extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
           child: Card(
-            clipBehavior: Clip.antiAliasWithSaveLayer,
+            clipBehavior: Clip.hardEdge,
             semanticContainer: true,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)),
             elevation: 2.0,
             child: Stack(
-              alignment: AlignmentDirectional.bottomCenter,
+              alignment: AlignmentDirectional.bottomStart,
               children: <Widget>[
                 Hero(
                   tag: _post.id,
-                  child: CachedNetworkImage(
-                      width: size.width,
-                      height: cardHeight,
+                  child: Container(
+                    height: cardHeight,
+                    width: size.width,
+                    child: CachedNetworkImage(
                       fit: BoxFit.cover,
-                      imageUrl: _post.jpFeaturedMedia),
+                      imageUrl: _post.jpFeaturedMedia,
+                    ),
+                  )
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                      gradient: theme.brightness == Brightness.light
-                          ? LinearGradient(
-                              end: Alignment.bottomCenter,
-                              begin: Alignment.topCenter,
-                              colors: [
-                                  Color(0xFF4286f4).withOpacity(.3),
-                                  Color(0xFF373B44).withOpacity(.8),
-                                ])
-                          : LinearGradient(
-                              end: Alignment.bottomCenter,
-                              begin: Alignment.topCenter,
-                              colors: [
-                                  Color(0xFFbdc3c7).withOpacity(.5),
-                                  Color(0xFF2c3e50).withOpacity(.8),
-                                ])),
+                Hero(
+                  tag: '${_post.id}' + 'gradient',
+                  child: Container(
+                    decoration: BoxDecoration(
+                        gradient: theme.brightness == Brightness.light
+                            ? LinearGradient(
+                                end: Alignment.bottomCenter,
+                                begin: Alignment.topCenter,
+                                colors: [
+                                    Color(0xFF4b6cb7).withOpacity(.5),
+                                    Color(0xFF182848).withOpacity(.9),
+                                  ])
+                            : LinearGradient(
+                                end: Alignment.bottomCenter,
+                                begin: Alignment.topCenter,
+                                colors: [
+                                    Color(0xFFbdc3c7).withOpacity(.5),
+                                    Color(0xFF2c3e50).withOpacity(.9),
+                                  ])),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
@@ -100,5 +108,5 @@ class PostCard extends StatelessWidget {
     );
   }
 
-  PostCard(this._post);
+  PostCard(this._post, this._scrollController);
 }

@@ -18,7 +18,7 @@ ThemeData appTheme(Brightness brightness) => new ThemeData(
           brightness == Brightness.light ? Colors.blue[400] : Colors.white,
       accentColorBrightness: brightness,
       backgroundColor:
-          brightness == Brightness.light ? Colors.grey[300] : Colors.grey[900],
+          brightness == Brightness.light ? Colors.grey[100] : Colors.grey[900],
       canvasColor: brightness == Brightness.light ? Colors.white : Colors.black,
 
       ///

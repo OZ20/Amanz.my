@@ -35,6 +35,7 @@ class _AppPage extends State<AppPage>
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
+    final font = theme.textTheme;
     return Scaffold(
       key: appBloc.appScaffoldKey,
       drawer: Theme(
@@ -66,7 +67,14 @@ class _AppPage extends State<AppPage>
                             Padding(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 5.0),
-                              child: Text('Settingan'),
+                              child: Text(
+                                'Tetapan',
+                                style: font.title.copyWith(
+                                    fontSize: 15.0,
+                                    color: theme.brightness == Brightness.light
+                                        ? Colors.blue
+                                        : Colors.white),
+                              ),
                             )
                           ],
                         ),
@@ -102,6 +110,8 @@ class _AppPage extends State<AppPage>
                 child: CategoryPage(), bloc: CategoryPageBloc()),
           ]),
       bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           currentIndex: _currentIndex,
           onTap: (index) => setState(() {
                 _currentIndex = index;
@@ -113,21 +123,38 @@ class _AppPage extends State<AppPage>
                   _tabController.animateTo(_currentIndex);
                 }
               }),
-          fixedColor: theme.brightness == Brightness.light
-              ? Colors.blue[400]
-              : Colors.white,
-          type: BottomNavigationBarType.fixed,
+          selectedItemColor: theme.brightness == Brightness.light
+              ? Colors.blue
+              : Colors.blue[700],
+          unselectedItemColor: theme.brightness == Brightness.light
+              ? Colors.grey
+              : Colors.grey,
+          type: BottomNavigationBarType.shifting,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              title: Text(''),
-              icon: Icon(FontAwesomeIcons.fortAwesomeAlt),
-            ),
+                title: Text('Home'),
+                activeIcon: CircleAvatar(
+                  backgroundColor: theme.brightness == Brightness.light
+                      ? Colors.blue
+                      : Colors.blue[700],
+                  radius: 13.0,
+                  backgroundImage: AssetImage(
+                    'assets/img/amanz-transparent.png',
+                  ),
+                ),
+                icon: CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  radius: 13.0,
+                  backgroundImage: AssetImage(
+                    'assets/img/amanz-transparent.png',
+                  ),
+                )),
             BottomNavigationBarItem(
-              title: Text(''),
+              title: Text('Category'),
               icon: Icon(FontAwesomeIcons.bars),
             ),
             BottomNavigationBarItem(
-              title: Text(''),
+              title: Text('Notification'),
               icon: Icon(FontAwesomeIcons.bell),
             ),
           ]),

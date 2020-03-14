@@ -20,9 +20,9 @@ class SearchCard extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) => BlocProvider<ArticlePageBloc>(
-                  child: ArticlePage(_post),
-                  bloc: ArticlePageBloc(),
-                ),
+              child: ArticlePage(_post),
+              bloc: ArticlePageBloc(),
+            ),
           )),
       child: Container(
         width: size.width,
@@ -39,23 +39,35 @@ class SearchCard extends StatelessWidget {
                   child: Container(
                     width: size.width * (2 / 3),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        Text(HtmlUnescape().convert(_post.title['rendered'])),
-                        Container(
-                          height: 40.0,
-                          child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              shrinkWrap: true,
-                              itemCount: _post.embedded.wpTerm.category.length,
-                              itemBuilder: (context, index) {
-                                return Padding(
-                                  padding: const EdgeInsets.only(right: 5.0),
-                                  child: Chip(
-                                      label: Text(_post.embedded.wpTerm
-                                          .category[index].name)),
-                                );
-                              }),
+                        Hero(
+                            tag: '${_post.id}: tajuk',
+                            child: Text(
+                              HtmlUnescape().convert(_post.title['rendered']),
+                              textAlign: TextAlign.start,
+                              style: theme.textTheme.title.copyWith(
+                                  fontWeight: FontWeight.w400, fontSize: 14.0),
+                            )),
+                        Align(
+                          alignment: Alignment.center,
+                          child: Container(
+                            height: 40.0,
+                            child: ListView.builder(
+                                scrollDirection: Axis.horizontal,
+                                shrinkWrap: true,
+                                itemCount:
+                                    _post.embedded.wpTerm.category.length,
+                                itemBuilder: (context, index) {
+                                  return Padding(
+                                    padding: const EdgeInsets.only(right: 5.0),
+                                    child: Chip(
+                                        label: Text(_post.embedded.wpTerm
+                                            .category[index].name)),
+                                  );
+                                }),
+                          ),
                         )
                       ],
                     ),
@@ -72,7 +84,8 @@ class SearchCard extends StatelessWidget {
                         ? CachedNetworkImage(
                             height: 80.0,
                             width: 80.0,
-                            placeholder: CircularProgressIndicator(),
+                            placeholder: (context, _post) =>
+                                CircularProgressIndicator(),
                             imageUrl: _post
                                 .embedded.media[0].media.thumbnail.sourceUrl)
                         : Container(

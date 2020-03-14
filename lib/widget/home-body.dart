@@ -9,8 +9,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class HomeBody extends StatelessWidget {
   final TabController _tabController;
   final _bloc;
-  final ScrollController _scrollController = new ScrollController();
-
   HomeBody(this._tabController, this._bloc);
 
   @override
@@ -20,9 +18,11 @@ class HomeBody extends StatelessWidget {
     return Scaffold(
         backgroundColor: theme.backgroundColor,
         body: NestedScrollView(
-          headerSliverBuilder: (context, innerScrolled) {
+          headerSliverBuilder: (context, innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
+                pinned: true,
+                forceElevated: innerBoxIsScrolled,
                 centerTitle: true,
                 leading: _bloc.title == 'BERITA'
                     ? InkWell(
@@ -55,8 +55,6 @@ class HomeBody extends StatelessWidget {
                         : Colors.white,
                   ),
                 ),
-                pinned: true,
-                forceElevated: innerScrolled,
                 bottom: TabBar(
                     indicatorWeight: 5.0,
                     labelColor: theme.brightness == Brightness.light
@@ -111,13 +109,15 @@ class HomeBody extends StatelessWidget {
     print(_bloc.toString() + sort.toString());
     switch (sort) {
       case SortBy.popular:
-        return mainWidget(_bloc.postPopular, sort);
+        final ScrollController _scrollController = new ScrollController();
+        return mainWidget(_bloc.postPopular, sort, _scrollController);
       default:
-        return mainWidget(_bloc.postNew, sort);
+        final ScrollController _scrollController = new ScrollController();
+        return mainWidget(_bloc.postNew, sort, _scrollController);
     }
   }
 
-  Widget mainWidget(bloc, sort) {
+  Widget mainWidget(bloc, sort, controller) {
     return StreamBuilder(
         stream: bloc,
         builder: (context, AsyncSnapshot<List<Post>> snapshot) {
@@ -134,11 +134,11 @@ class HomeBody extends StatelessWidget {
                 onRefresh: () => _bloc.init(),
                 child: ListView.builder(
                     key: PageStorageKey(sort),
-                    controller: _scrollController,
+                    controller: controller,
                     shrinkWrap: true,
                     itemCount: snapshot.data.length,
                     itemBuilder: (context, index) {
-                      return Center(child: PostCard(snapshot.data[index]));
+                      return Center(child: PostCard(snapshot.data[index], controller));
                     }),
               ),
             );
